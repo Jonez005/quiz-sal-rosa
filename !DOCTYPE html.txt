@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetita de Sal Rosa del Himalaya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #FFE4F0 0%, #FFF5F9 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 30px 20px 20px;
+            background: white;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #FFE4F0;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF1493 0%, #FF69B4 100%);
+            transition: width 0.3s ease;
+        }
+
+        .page {
+            display: none;
+            padding: 30px;
+            min-height: 400px;
+        }
+
+        .page.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        h1 .highlight {
+            color: #FF1493;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 350px;
+            margin: 20px auto;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .attention-box {
+            background: #FFF3F8;
+            border-left: 4px solid #FF1493;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .attention-box strong {
+            color: #FF1493;
+        }
+
+        .button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 20, 147, 0.4);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .option {
+            width: 100%;
+            padding: 18px 20px;
+            background: #FFF3F8;
+            border: 2px solid transparent;
+            border-radius: 15px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .option:hover {
+            background: #FFE4F0;
+            border-color: #FF1493;
+        }
+
+        .option.selected {
+            background: #FF1493;
+            color: white;
+            border-color: #FF1493;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #FFE4F0;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: border-color 0.2s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #FF1493;
+        }
+
+        .slider-container {
+            margin: 30px 0;
+        }
+
+        .slider-value {
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: #FF1493;
+            margin-bottom: 20px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #FFE4F0;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #FF1493;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #FF1493;
+            cursor: pointer;
+            border: none;
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            color: #999;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .unit-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .unit-btn {
+            padding: 10px 30px;
+            border: 2px solid #FFE4F0;
+            background: white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .unit-btn.active {
+            background: #FF1493;
+            color: white;
+            border-color: #FF1493;
+        }
+
+        .checkbox-option {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .loading-screen {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 8px;
+            background: #FFE4F0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 30px 0;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #FF1493 0%, #FF69B4 100%);
+            width: 0%;
+            animation: loading 3s ease forwards;
+        }
+
+        @keyframes loading {
+            to { width: 100%; }
+        }
+
+        .imc-card {
+            background: #FFF3F8;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .imc-scale {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            font-size: 12px;
+        }
+
+        .imc-scale div {
+            padding: 8px 12px;
+            border-radius: 5px;
+            background: #f0f0f0;
+        }
+
+        .imc-scale .obesidade {
+            background: #ff4444;
+            color: white;
+            font-weight: bold;
+        }
+
+        .alert-box {
+            background: #FFF9E6;
+            border-left: 4px solid #FFB800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .success-box {
+            background: #E6FFF0;
+            border-left: 4px solid #00CC66;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .bonus-card {
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            color: white;
+            font-weight: bold;
+        }
+
+        .bonus-1 { background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%); }
+        .bonus-2 { background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%); }
+        .bonus-3 { background: linear-gradient(135deg, #9B59B6 0%, #C39BD3 100%); }
+        .bonus-4 { background: linear-gradient(135deg, #FF1493 0%, #FF4500 100%); }
+
+        .testimonial {
+            background: white;
+            border: 2px solid #FFE4F0;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .price-box {
+            text-align: center;
+            background: white;
+            border: 3px solid #FF1493;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 18px;
+        }
+
+        .new-price {
+            font-size: 48px;
+            color: #FF1493;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .guarantee-box {
+            background: #FFFBEA;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .security-badges {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* EDITABLE SECTIONS - HIGHLIGHTED */
+        .editable {
+            border: 2px dashed #FF1493;
+            padding: 10px;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .editable::before {
+            content: "✏️ EDITÁVEL";
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            background: #FF1493;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                border-radius: 0;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            .new-price {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <div class="logo editable">
+                <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #FF1493, #FF69B4); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                    <span style="color: white; font-size: 18px; font-weight: bold;">LOGO<br>AQUI</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+
+        <!-- PÁGINA 1: Inicial -->
+        <div class="page active" id="page1">
+            <h1>Elimina hasta <span class="highlight">15kg de grasa</span> en 30 días con esta nueva receta de Sal Rosa</h1>
+            
+            <div class="hero-image editable">
+                <div style="background: #FFE4F0; height: 200px; display: flex; align-items: center; justify-content: center; color: #FF1493;">
+                    [COLOQUE SUA IMAGEM AQUI]
+                </div>
+            </div>
+
+            <div class="attention-box">
+                <strong>Atención:</strong> ofrecemos apenas <strong>una consulta por persona</strong>. Si te vas, perderás tu turno. ¡Aprovecha esta <strong>oportunidad exclusiva</strong>!
+            </div>
+
+            <button class="button" onclick="nextPage()">HACER TEST GRATIS</button>
+        </div>
+
+        <!-- PÁGINA 2: Quantos quilos quer perder -->
+        <div class="page" id="page2">
+            <h1>¿Cuántos kilos <span class="highlight">deseas perder?</span></h1>
+            <p class="subtitle">El protocolo de Sal Rosa del Himalaya ayuda a eliminar grasa de forma acelerada.</p>
+
+            <div class="option" onclick="selectOption(this, 'goal', 'hasta5'); nextPage();">
+                Hasta 5kg
+            </div>
+            <div class="option" onclick="selectOption(this, 'goal', '6a10'); nextPage();">
+                De 6 a 10 kg
+            </div>
+            <div class="option" onclick="selectOption(this, 'goal', '11a15'); nextPage();">
+                De 11 a 15 kg
+            </div>
+            <div class="option" onclick="selectOption(this, 'goal', '16a20'); nextPage();">
+                De 16 a 20 kg
+            </div>
+            <div class="option" onclick="selectOption(this, 'goal', 'mais20'); nextPage();">
+                Más de 20 kg
+            </div>
+        </div>
+
+        <!-- PÁGINA 3: Como classificaria seu corpo -->
+        <div class="page" id="page3">
+            <h1>¿Cómo clasificarías tu <span class="highlight">cuerpo hoy?</span></h1>
+
+            <div class="option" onclick="selectOption(this, 'body', 'regular'); nextPage();">
+                Regular
+            </div>
+            <div class="option" onclick="selectOption(this, 'body', 'flacido'); nextPage();">
+                Flácido
+            </div>
+            <div class="option" onclick="selectOption(this, 'body', 'sobrepeso'); nextPage();">
+                Sobrepeso
+            </div>
+        </div>
+
+        <!-- PÁGINA 4: Área para reduzir gordura -->
+        <div class="page" id="page4">
+            <h1>¿En qué área de tu cuerpo te gustaría <span class="highlight">reducir más grasa?</span></h1>
+
+            <div class="option" onclick="selectOption(this, 'area', 'cartucheras'); nextPage();">
+                Región de los Cartucheras
+            </div>
+            <div class="option" onclick="selectOption(this, 'area', 'muslos'); nextPage();">
+                Región de los Muslos
+            </div>
+            <div class="option" onclick="selectOption(this, 'area', 'abdomen'); nextPage();">
+                Región del Abdomen (barriga)
+            </div>
+            <div class="option" onclick="selectOption(this, 'area', 'gluteos'); nextPage();">
+                Región de los Glúteos
+            </div>
+            <div class="option" onclick="selectOption(this, 'area', 'brazos'); nextPage();">
+                Región de los Brazos
+            </div>
+        </div>
+
+        <!-- PÁGINA 5: Nome -->
+        <div class="page" id="page5">
+            <h1>¿Cuál es tu <span class="highlight">nombre?</span></h1>
+            <p class="subtitle">Para armar tu plan personalizado, necesitamos tu nombre. Quédate tranquila, tus datos están protegidos 🔒</p>
+
+            <input type="text" class="input-field" id="userName" placeholder="Escribe tu nombre">
+
+            <button class="button" onclick="saveName(); nextPage();">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 6: Impacto do peso -->
+        <div class="page" id="page6">
+            <h1><span id="userNameDisplay">Amiga</span>, dime <span class="highlight">¿cómo tu peso impacta tu vida?</span></h1>
+
+            <div class="option" onclick="selectOption(this, 'impact', 'fotos'); nextPage();">
+                📷 Evito tomar fotos porque tengo vergüenza
+            </div>
+            <div class="option" onclick="selectOption(this, 'impact', 'pareja'); nextPage();">
+                💔 Mi pareja no me mira más con deseo como antes
+            </div>
+            <div class="option" onclick="selectOption(this, 'impact', 'social'); nextPage();">
+                😳 Evito encuentros sociales porque no me siento bien conmigo misma
+            </div>
+            <div class="option" onclick="selectOption(this, 'impact', 'ninguna'); nextPage();">
+                👏 Ninguna de las opciones
+            </div>
+        </div>
+
+        <!-- PÁGINA 7: Feliz com aparência -->
+        <div class="page" id="page7">
+            <h1>¿Estás realmente <span class="highlight">feliz con tu apariencia?</span></h1>
+
+            <div class="option" onclick="selectOption(this, 'happy', 'no'); nextPage();">
+                😔 No, porque me siento con sobrepeso
+            </div>
+            <div class="option" onclick="selectOption(this, 'happy', 'sim'); nextPage();">
+                💔 Sí, pero sé que puedo mejorar mi salud
+            </div>
+            <div class="option" onclick="selectOption(this, 'happy', 'mejorar'); nextPage();">
+                😊 No, me gustaría perder peso para mejorar mi bienestar
+            </div>
+        </div>
+
+        <!-- PÁGINA 8: O que impede -->
+        <div class="page" id="page8">
+            <h1>¿Qué es lo que más te <span class="highlight">impide adelgazar?</span></h1>
+
+            <div class="option" onclick="selectOption(this, 'obstacle', 'tempo'); nextPage();">
+                <div>
+                    <strong>⏰ Falta de tiempo</strong><br>
+                    <small>Rutina agitada.</small>
+                </div>
+            </div>
+            <div class="option" onclick="selectOption(this, 'obstacle', 'autocontrol'); nextPage();">
+                <div>
+                    <strong>🤪 Autocontrol</strong><br>
+                    <small>Dificultad para resistir tentaciones alimentarias.</small>
+                </div>
+            </div>
+            <div class="option" onclick="selectOption(this, 'obstacle', 'financiero'); nextPage();">
+                <div>
+                    <strong>💰 Financiero</strong><br>
+                    <small>Encontrar opciones saludables más caras que alimentos procesados.</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- PÁGINA 9: Benefícios desejados -->
+        <div class="page" id="page9">
+            <h1>¿Cuáles de estos <span class="highlight">beneficios te gustaría tener?</span></h1>
+            <p class="subtitle">👉 Vamos a personalizar tu fórmula para maximizar los resultados.</p>
+
+            <div class="option checkbox-option">
+                <input type="checkbox" id="benefit1">
+                📋 Adelgazar sin esfuerzo y sin efecto rebote
+            </div>
+            <div class="option checkbox-option">
+                <input type="checkbox" id="benefit2">
+                📋 Sueño más profundo
+            </div>
+            <div class="option checkbox-option">
+                <input type="checkbox" id="benefit3">
+                📋 Más energía y disposición durante el día
+            </div>
+            <div class="option checkbox-option">
+                <input type="checkbox" id="benefit4">
+                📋 Aumento de la autoestima y confianza
+            </div>
+            <div class="option checkbox-option">
+                <input type="checkbox" id="benefit5">
+                📋 Reducción del estrés y ansiedad
+            </div>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 15: Água por dia -->
+        <div class="page" id="page15">
+            <h1>¿Cuántos <span class="highlight">vasos de agua</span> bebes por día?</h1>
+            <p class="subtitle">Tu nivel de hidratación también influye en tu pérdida de peso.</p>
+
+            <div class="option" onclick="selectOption(this, 'water', 'cafe'); nextPage();">
+                ☕ Bebo solo café o té
+            </div>
+            <div class="option" onclick="selectOption(this, 'water', '1-2'); nextPage();">
+                💧 1-2 vasos por día
+            </div>
+            <div class="option" onclick="selectOption(this, 'water', '2-6'); nextPage();">
+                💧 2-6 vasos por día
+            </div>
+            <div class="option" onclick="selectOption(this, 'water', 'mais6'); nextPage();">
+                💧 Más de 6 vasos
+            </div>
+        </div>
+
+        <!-- PÁGINA 16: Loading -->
+        <div class="page" id="page16">
+            <div class="loading-screen">
+                <h1>Espera mientras preparamos la <span class="highlight">Sal Rosa del Himalaya</span>...</h1>
+                
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+
+                <div class="hero-image editable">
+                    <div style="background: #FFE4F0; height: 200px; display: flex; align-items: center; justify-content: center; color: #FF1493;">
+                        [IMAGEM ANTES/DEPOIS]<br>Día 01 → Día 30<br>-12kg
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PÁGINA 17: Resultado IMC -->
+        <div class="page" id="page17">
+            <div class="alert-box">
+                <strong>⚠️ ATENCIÓN, <span id="userNameDisplay2">Amiga</span>!</strong> Por tus respuestas, tu cuerpo está en modo <strong>ACUMULACIÓN DE GRASA</strong>. Si no actúas HOY, esta situación tiende a EMPEORAR.
+            </div>
+
+            <div class="imc-card">
+                <h3 style="text-align: center; margin-bottom: 15px;">Índice de Masa Corporal (IMC)</h3>
+                <p style="text-align: center; font-size: 24px; color: #FF1493; font-weight: bold;">Tu IMC: <span id="imcValue">21.60</span></p>
+                
+                <div class="imc-scale">
+                    <div>Bajo Peso</div>
+                    <div>Normal</div>
+                    <div>Sobrepeso</div>
+                    <div class="obesidade">Obesidad</div>
+                </div>
+                <p style="text-align: center; color: #ff4444; font-weight: bold;">⚠️ Zona de Alerta - ¡Tu resultado!</p>
+            </div>
+
+            <div class="alert-box">
+                <strong>⚠️ ¡Tu metabolismo puede estar saboteándose sin que te des cuenta!</strong>
+                <p style="margin-top: 10px;">Aun estando en el peso normal, tu cuerpo puede estar reteniendo toxinas de forma más lenta, dificultando la quema de grasa y dejándote con menos energía.</p>
+            </div>
+
+            <h3 style="margin: 20px 0;">⚠️ Algunas señales de alerta:</h3>
+
+            <div style="margin: 10px 0; padding: 10px; background: #FFF3F8; border-radius: 10px;">
+                ⚠️ ❌ Metabolismo lento y dificultad para adelgazar incluso comiendo poco
+            </div>
+            <div style="margin: 10px 0; padding: 10px; background: #FFF3F8; border-radius: 10px;">
+                ⚠️ ❌ Cansancio constante y sensación de hinchazón
+            </div>
+            <div style="margin: 10px 0; padding: 10px; background: #FFF3F8; border-radius: 10px;">
+                ⚠️ ❌ Acumulación de grasa en áreas específicas del cuerpo, principalmente en la barriga
+            </div>
+
+            <div class="success-box">
+                <strong>✅ ¡Con la Sal Rosa del Himalaya tu cuerpo acelera la quema de grasa naturalmente!</strong>
+                <p style="margin-top: 10px;">✅ La combinación ideal de ingredientes puede activar tu metabolismo, reducir la retención de líquidos y aumentar tu disposición.</p>
+            </div>
+
+            <div style="background: #E6FFF0; padding: 15px; border-radius: 10px; text-align: center; margin: 20px 0;">
+                <strong>🔥 ¡Descubre ahora cómo la Sal Rosa del Himalaya puede transformar tu cuerpo!</strong>
+            </div>
+
+            <div class="hero-image editable">
+                <div style="background: #FFE4F0; height: 200px; display: flex; align-items: center; justify-content: center; color: #FF1493;">
+                    [TRANSFORMAÇÃO DE EXEMPLO]
+                </div>
+            </div>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 18: Está pronta para transformar -->
+        <div class="page" id="page18">
+            <h1><span id="userNameDisplay3">Amiga</span>, ¿estás lista para <span class="highlight">transformar tu cuerpo</span> y tu <span class="highlight">salud?</span></h1>
+
+            <div class="hero-image editable">
+                <div style="background: #FFE4F0; height: 200px; display: flex; align-items: center; justify-content: center; color: #FF1493;">
+                    Esta eres tú con <span id="currentWeight">70</span> kg,<br>antes de la Sal Rosa
+                </div>
+            </div>
+
+            <h3 style="margin: 20px 0 10px 0;">Comparación:</h3>
+
+            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF3F8; border-radius: 10px;">
+                <strong>Metabolismo</strong>
+                <div style="flex: 1; margin: 0 10px;">
+                    <div style="height: 8px; background: #FFE4F0; border-radius: 5px; overflow: hidden;">
+                        <div style="width: 40%; height: 100%; background: linear-gradient(90deg, #ff4444, #ffaa44);"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 10px; margin-top: 5px;">
+                        <span>Lento</span>
+                        <span>Acelerado</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF3F8; border-radius: 10px;">
+                <strong>Estrés</strong>
+                <div style="flex: 1; margin: 0 10px;">
+                    <div style="height: 8px; background: #FFE4F0; border-radius: 5px; overflow: hidden;">
+                        <div style="width: 60%; height: 100%; background: linear-gradient(90deg, #ff4444, #ffaa44);"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 10px; margin-top: 5px;">
+                        <span>Alto</span>
+                        <span>Bajo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF3F8; border-radius: 10px;">
+                <strong>Energía</strong>
+                <div style="flex: 1; margin: 0 10px;">
+                    <div style="height: 8px; background: #FFE4F0; border-radius: 5px; overflow: hidden;">
+                        <div style="width: 35%; height: 100%; background: linear-gradient(90deg, #ff4444, #ffaa44);"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 10px; margin-top: 5px;">
+                        <span>Débil</span>
+                        <span>Fuerte</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #FFF3F8; padding: 20px; border-radius: 15px; margin: 20px 0;">
+                <h3 style="color: #FF1493; margin-bottom: 15px;">¿Cómo funciona el Plan?</h3>
+                <p style="margin-bottom: 15px;">Con base en tus informaciones personales y objetivos, creamos un plan 100% personalizado para que uses la Sal Rosa del Himalaya. Nuestra fórmula casera está desarrollada para potencializar tu pérdida de peso en 4 semanas, respetando tu estilo de vida, tus limitaciones y tu rutina. No necesitas preocuparte, nosotros te guiaremos en qué comer.</p>
+
+                <h4 style="color: #FF1493; margin: 15px 0 10px 0;">Tu plan incluye:</h4>
+
+                <div style="margin: 10px 0; padding: 10px; background: #E6FFF0; border-radius: 10px;">
+                    • <strong>Cómo usar la Sal Rosa de la Forma Correcta:</strong> Basado en las investigaciones más recientes sobre cómo usar sustancias como Liraglutida, desarrollamos el Protocolo Sal Rosa, la forma más eficaz y segura de usar la Sal Rosa para perder peso sin que pierdas músculos o sientas mucha hambre.
+                </div>
+
+                <div style="margin: 10px 0; padding: 10px; background: #E6FFF0; border-radius: 10px;">
+                    • <strong>Definición de metas diarias:</strong> para que te mantengas en el camino correcto
+                </div>
+
+                <div style="margin: 10px 0; padding: 10px; background: #E6FFF0; border-radius: 10px;">
+                    • <strong>Planilla de seguimiento:</strong> Sabe exactamente cuánto estás evolucionando.
+                </div>
+
+                <div style="margin: 10px 0; padding: 10px; background: #E6FFF0; border-radius: 10px;">
+                    • <strong>+ 4 Bonus Exclusivos</strong>
+                </div>
+            </div>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 19: Bônus -->
+        <div class="page" id="page19">
+            <h1>Al Asegurar Tu <span class="highlight">Sal Rosa del Himalaya</span> Hoy, ¡Recibes Todos los Bonus de Regalo!</h1>
+
+            <div class="editable">
+                <div class="bonus-card bonus-1">
+                    <div>🌿 BONUS 1: Potencializa la Quema de Grasa</div>
+                    <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Sabe exactamente qué comer cuando estés usando la Sal Rosa</p>
+                </div>
+
+                <div class="bonus-card bonus-2">
+                    <div>🔥 BONUS 2: Deshinchar en 7 Días</div>
+                    <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Aprende la forma más fácil de deshinchar y ver grandes resultados en el espejo en menos de 7 días.</p>
+                </div>
+
+                <div class="bonus-card bonus-3">
+                    <div>⚖️ BONUS 3: Anti-Efecto Rebote</div>
+                    <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Descubre cómo mantener el peso perdido y nunca más preocuparte por engordar.</p>
+                </div>
+
+                <div class="bonus-card bonus-4">
+                    <div>🔥 BONUS 4: Metabolismo PRO 5x</div>
+                    <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Aprende las principales estrategias para acelerar tu metabolismo y quemar grasa.</p>
+                </div>
+            </div>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 20: Oferta Final -->
+        <div class="page" id="page20">
+            <div style="background: #FF4444; color: white; padding: 15px; text-align: center; border-radius: 10px; margin-bottom: 20px; font-weight: bold;">
+                ⏰ <span id="countdown">03:53</span> - Oferta por tiempo limitado
+            </div>
+
+            <h1 style="background: #FF1493; color: white; padding: 15px; border-radius: 10px; text-align: center; margin-bottom: 20px;">TODO LO QUE VAS A RECIBIR HOY:</h1>
+
+            <div style="background: #FFF3F8; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                ✅ <strong>Sal Rosa del Himalaya Completo</strong><br>
+                <small>y Paso a Paso de cómo usar.</small>
+            </div>
+
+            <div style="background: #FFF3F8; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                ✅ <strong>Detox Exclusivo de 7 Días</strong>
+            </div>
+
+            <div style="background: #FFF3F8; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                ✅ <strong>Soporte Exclusivo</strong><br>
+                <small>durante el proceso de la Sal Rosa.</small>
+            </div>
+
+            <div style="background: #FFF3F8; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                ✅ <strong>Pago Único</strong><br>
+                <small>¡sin mensualidades!</small>
+            </div>
+
+            <div style="background: #FFFBEA; padding: 15px; border-radius: 10px; text-align: center; margin: 20px 0; border: 2px dashed #FFB800;">
+                ✅ <strong>¡RECIBES TODOS LOS 4 BONUS ARRIBA HOY!</strong>
+            </div>
+
+            <div class="price-box editable">
+                <div class="old-price">Valor Total: R$ 197</div>
+                <div>🤑 Por Apenas:</div>
+                <div class="new-price">R$ 37,90</div>
+                <div style="font-size: 14px; color: #666;">¡El Secreto para Deshinchar, Perder Medidas y Sentirte Más Linda en Pocos Días!</div>
+            </div>
+
+            <!-- EDITE AQUI: Cole o link da sua página de checkout -->
+            <a href="https://go.hotmart.com/SEU-LINK-AQUI" class="button editable" style="text-decoration: none; display: block; text-align: center;">
+                ¡Quiero Empezar Hoy! 🔥
+            </a>
+
+            <div class="security-badges">
+                <div>🛡️ Satisfacción<br>Garantizada</div>
+                <div>🔒 Compra<br>Segura</div>
+                <div>🔐 Privacidad<br>Protegida</div>
+            </div>
+
+            <h2 style="text-align: center; margin: 30px 0;">Quien Usa Tiene Resultado 😍 👇</h2>
+
+            <div class="hero-image editable">
+                <div style="background: #FFE4F0; height: 200px; display: flex; align-items: center; justify-content: center; color: #FF1493;">
+                    [IMAGEM ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div class="guarantee-box">
+                <div style="font-size: 40px; margin-bottom: 10px;">🏆</div>
+                <h3>GARANTÍA DE 30 DÍAS</h3>
+                <p style="margin-top: 15px;">La compra de este material es totalmente sin riesgo para ti.</p>
+                <p style="margin-top: 10px;">Si no cumple con tus expectativas en los primeros 30 días después de la compra, te reembolsaremos todo el valor que pagaste, sin hacer preguntas.</p>
+                <p style="margin-top: 15px; color: #FF1493; font-weight: bold;" class="editable">Solo tienes que enviar un correo al soporte en<br>salrosahimalaya@gmail.com</p>
+            </div>
+
+            <div class="testimonial">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <strong>Isabela Soares</strong><br>
+                <small>São Paulo (SP) - Inició con la fórmula en 18/02/2025</small>
+                <p style="margin-top: 10px;">¡Literalmente estoy sin palabras! ¡Mira esto gente! Fueron 2 meses y medio siguiendo sin fallar, gente es increíble esto, no lo esperaba, ¡estoy impactada de verdad! 😱😍</p>
+                <div class="editable" style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES - ANTES - DEPOIS]
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <strong>Bruna Gonçalves</strong><br>
+                <small>Itajaí (SC) - Inició con la fórmula en 04/03/2025</small>
+                <p style="margin-top: 10px;">Solo yo sé cuánto sufrí intentando adelgazar. Esto fue único, yo juraba que era mentira, pero ahí está el resultado, seguro que pronto las plumas bajan de precio, nadie va a querer estar pinchándose, esto es divino jajaja 😍 🍋</p>
+                <div class="editable" style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div style="background: #FF1493; color: white; padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h2 style="color: white; margin-bottom: 15px;">MÁS VENDIDO</h2>
+                <h3 style="color: white; margin-bottom: 10px;">Sal Rosa del Himalaya</h3>
+                <p style="margin-bottom: 15px;">Pago Único</p>
+                <div style="font-size: 48px; font-weight: bold; margin: 20px 0;" class="editable">R$ 37,90</div>
+                <p style="font-size: 14px;">al contado</p>
+            </div>
+
+            <a href="https://go.hotmart.com/SEU-LINK-AQUI" class="button editable" style="text-decoration: none; display: block; text-align: center;">
+                ¡Quiero Empezar Hoy! 🔥
+            </a>
+
+            <div class="security-badges">
+                <div>🛡️ Satisfacción Garantizada</div>
+                <div>🔒 Compra Segura</div>
+                <div>🔐 Privacidad Protegida</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // CONFIGURAÇÕES EDITÁVEIS
+        const CONFIG = {
+            checkoutUrl: "https://go.hotmart.com/SEU-LINK-AQUI", // EDITE AQUI
+            countdownMinutes: 5 // Tempo do countdown em minutos
+        };
+
+        let currentPage = 1;
+        const totalPages = 20;
+        let userData = {};
+        let weightUnit = 'kg';
+        let heightUnit = 'cm';
+
+        function updateProgress() {
+            const progress = (currentPage / totalPages) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function nextPage() {
+            document.getElementById('page' + currentPage).classList.remove('active');
+            currentPage++;
+            
+            if (currentPage === 16) {
+                setTimeout(() => {
+                    nextPage();
+                }, 3000);
+            }
+            
+            if (currentPage === 17) {
+                calculateIMC();
+            }
+
+            if (currentPage === 20) {
+                startCountdown();
+            }
+            
+            document.getElementById('page' + currentPage).classList.add('active');
+            updateProgress();
+            window.scrollTo(0, 0);
+        }
+
+        function selectOption(element, key, value) {
+            const options = element.parentElement.querySelectorAll('.option');
+            options.forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            userData[key] = value;
+        }
+
+        function saveName() {
+            const name = document.getElementById('userName').value;
+            if (name) {
+                userData.name = name;
+                document.getElementById('userNameDisplay').textContent = name;
+                document.getElementById('userNameDisplay2').textContent = name;
+                document.getElementById('userNameDisplay3').textContent = name;
+            }
+        }
+
+        function updateSlider(type) {
+            const slider = document.getElementById(type + 'Slider');
+            const value = slider.value;
+            let unit = type === 'height' ? heightUnit : weightUnit;
+            
+            if (type === 'weight' && unit === 'lb') {
+                document.getElementById(type + 'Value').textContent = Math.round(value * 2.205) + unit;
+            } else if (type === 'height' && unit === 'in') {
+                document.getElementById(type + 'Value').textContent = Math.round(value * 0.3937) + unit;
+            } else {
+                document.getElementById(type + 'Value').textContent = value + unit;
+            }
+        }
+
+        function toggleUnit(type, unit) {
+            if (type === 'weight') {
+                weightUnit = unit;
+                const buttons = document.querySelectorAll('#page12 .unit-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+                updateSlider('weight');
+            } else if (type === 'height') {
+                heightUnit = unit;
+                const buttons = document.querySelectorAll('#page13 .unit-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+                updateSlider('height');
+            } else if (type === 'goal') {
+                weightUnit = unit;
+                const buttons = document.querySelectorAll('#page14 .unit-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+                updateSlider('goal');
+            }
+        }
+
+        function saveWeight() {
+            userData.weight = document.getElementById('weightSlider').value;
+            document.getElementById('currentWeight').textContent = userData.weight;
+        }
+
+        function saveHeight() {
+            userData.height = document.getElementById('heightSlider').value;
+        }
+
+        function calculateIMC() {
+            const weight = parseFloat(userData.weight);
+            const height = parseFloat(userData.height) / 100;
+            const imc = (weight / (height * height)).toFixed(2);
+            document.getElementById('imcValue').textContent = imc;
+        }
+
+        function startCountdown() {
+            let timeLeft = CONFIG.countdownMinutes * 60;
+            
+            const countdownInterval = setInterval(() => {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                document.getElementById('countdown').textContent = 
+                    String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+                
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                }
+                timeLeft--;
+            }, 1000);
+        }
+
+        // Inicializar
+        updateProgress();
+    </script>
+</body>
+</html>
+
+        <!-- PÁGINA 10: Explicação do método -->
+        <div class="page" id="page10">
+            <h1>¡La <span class="highlight">Sal Rosa del Himalaya</span> Que Está Haciendo Que Miles de Hombres y Mujeres Adelgacen Sin Gastar Una Fortuna en Farmacia!</h1>
+            
+            <p class="subtitle">Descubre el método casero, 100% seguro y natural, que imita los efectos del Mounjaro Ozempic y Zepbound — controlando tu hambre, acelerando el metabolismo y haciéndote perder peso de forma rápida y definitiva. Sin inyecciones, sin gastar ríos de dinero y sin depender de médico charlatán.</p>
+
+            <div class="hero-image editable">
+                <div style="background: #FFE4F0; height: 250px; display: flex; align-items: center; justify-content: center; color: #FF1493;">
+                    [DIAGRAMA: CÓMO FUNCIONA]
+                </div>
+            </div>
+
+            <p class="subtitle">La Sal Rosa del Himalaya actúa mientras duermes, acelerando la quema de grasa a través del estímulo natural del metabolismo y del equilibrio hormonal nocturno.</p>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 11: Depoimentos -->
+        <div class="page" id="page11">
+            <h1>🔥 <span class="highlight">¡Historias Reales de Transformación!</span></h1>
+
+            <div class="testimonial editable">
+                <strong>Fernanda Oliveira</strong><br>
+                <small>Belo Alegre - RS</small>
+                <p style="margin-top: 10px;">Ya había intentado de todo para adelgazar, pero nada funcionaba. Después de incluir la fórmula de la Sal Rosa del Himalaya en mi rutina, perdí 11kg sin cambiar nada en mi alimentación. Ahora me siento más confiante y energizada. ¡Gracias por cambiar mi vida!</p>
+                <div style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div class="testimonial editable">
+                <strong>Karoline Santos</strong><br>
+                <small>São Paulo - SP</small>
+                <p style="margin-top: 10px;">Gente, yo nunca lograba adelgazar y dejar de comer azúcar. Parecía una locura, pero la Sal Rosa del Himalaya cambió todo. Ya no siento ganas de comer dulce. Todo lo que intentaba no funcionaba, pero esto sí funcionó. Solo seguí el paso a paso correctamente y dio resultado. ¡9kg en apenas 30 días!</p>
+                <div style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div class="testimonial editable" style="opacity: 0.3;">
+                <strong>[DEPOIMENTO MASCULINO 1]</strong><br>
+                <small>[Cidade] - [Estado]</small>
+                <p style="margin-top: 10px;">[TEXTO DO DEPOIMENTO AQUI]</p>
+                <div style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div class="testimonial editable" style="opacity: 0.3;">
+                <strong>[DEPOIMENTO MASCULINO 2]</strong><br>
+                <small>[Cidade] - [Estado]</small>
+                <p style="margin-top: 10px;">[TEXTO DO DEPOIMENTO AQUI]</p>
+                <div style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 12: Peso atual -->
+        <div class="page" id="page12">
+            <h1>¿Cuál es tu <span class="highlight">peso actual?</span></h1>
+            <p class="subtitle">¡Estamos casi listos! Vamos a ajustar tu plan de acuerdo con tu cuerpo.</p>
+
+            <div class="unit-toggle">
+                <button class="unit-btn active" onclick="toggleUnit('weight', 'kg')">kg</button>
+                <button class="unit-btn" onclick="toggleUnit('weight', 'lb')">lb</button>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-value" id="weightValue">70kg</div>
+                <input type="range" min="40" max="150" value="70" class="slider" id="weightSlider" oninput="updateSlider('weight')">
+                <div class="slider-labels">
+                    <span>40</span>
+                    <span style="font-size: 10px;">Arrastra para ajustar</span>
+                    <span>150</span>
+                </div>
+            </div>
+
+            <p class="subtitle">Basado en esto, ¡ajustaremos la dosis ideal para los mejores resultados!</p>
+
+            <button class="button" onclick="saveWeight(); nextPage();">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 13: Altura -->
+        <div class="page" id="page13">
+            <h1>¿Cuál es tu <span class="highlight">altura?</span></h1>
+            <p class="subtitle">Esto nos ayudará a calcular la cantidad exacta de la Sal Rosa del Himalaya para tu cuerpo.</p>
+
+            <div class="unit-toggle">
+                <button class="unit-btn active" onclick="toggleUnit('height', 'cm')">cm</button>
+                <button class="unit-btn" onclick="toggleUnit('height', 'in')">in</button>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-value" id="heightValue">170cm</div>
+                <input type="range" min="140" max="210" value="170" class="slider" id="heightSlider" oninput="updateSlider('height')">
+                <div class="slider-labels">
+                    <span>140</span>
+                    <span style="font-size: 10px;">Arrastra para ajustar</span>
+                    <span>210</span>
+                </div>
+            </div>
+
+            <button class="button" onclick="saveHeight(); nextPage();">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 14: Peso desejado -->
+        <div class="page" id="page14">
+            <h1>¿Cuál es tu <span class="highlight">objetivo de peso</span> (deseado)?</h1>
+            <p class="subtitle">Esto nos ayudará a personalizar un plan específicamente para ti.</p>
+
+            <div class="unit-toggle">
+                <button class="unit-btn active" onclick="toggleUnit('goal', 'kg')">kg</button>
+                <button class="unit-btn" onclick="toggleUnit('goal', 'lb')">lb</button>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-value" id="goalValue">60kg</div>
+                <input type="range" min="35" max="120" value="60" class="slider" id="goalSlider" oninput="updateSlider('goal')">
+                <div class="slider-labels">
+                    <span>35</span>
+                    <span style="font-size: 10px;">Arrastra para ajustar</span>
+                    <span>120</span>
+                </div>
+            </div>
+
+            <p class="subtitle">Basado en esto, ¡ajustaremos la dosis ideal para los mejores resultados!</p>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
