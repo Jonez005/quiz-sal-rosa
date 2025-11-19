@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(180deg, #FFE4F0 0%, #FFF5F9 100%);
+            background: linear-gradient(180deg, #FFD4C8 0%, #FFF5F2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -37,15 +37,21 @@
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             margin: 0 auto;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .progress-bar {
             width: 100%;
             height: 6px;
-            background: #FFE4F0;
+            background: #FFD4C8;
             position: relative;
         }
 
@@ -104,7 +110,7 @@
         }
 
         .attention-box {
-            background: #FFF3F8;
+            background: #FFF0EB;
             border-left: 4px solid #FF1493;
             padding: 15px;
             margin: 20px 0;
@@ -141,7 +147,7 @@
         .option {
             width: 100%;
             padding: 18px 20px;
-            background: #FFF3F8;
+            background: #FFF0EB;
             border: 2px solid transparent;
             border-radius: 15px;
             margin-bottom: 12px;
@@ -155,7 +161,7 @@
         }
 
         .option:hover {
-            background: #FFE4F0;
+            background: #FFE5DB;
             border-color: #FF1493;
         }
 
@@ -168,7 +174,7 @@
         .input-field {
             width: 100%;
             padding: 15px;
-            border: 2px solid #FFE4F0;
+            border: 2px solid #FFD4C8;
             border-radius: 10px;
             font-size: 16px;
             margin-bottom: 10px;
@@ -196,7 +202,7 @@
             width: 100%;
             height: 8px;
             border-radius: 5px;
-            background: #FFE4F0;
+            background: #FFD4C8;
             outline: none;
             -webkit-appearance: none;
         }
@@ -237,7 +243,7 @@
 
         .unit-btn {
             padding: 10px 30px;
-            border: 2px solid #FFE4F0;
+            border: 2px solid #FFD4C8;
             background: white;
             border-radius: 50px;
             cursor: pointer;
@@ -273,7 +279,7 @@
         .loading-bar {
             width: 100%;
             height: 8px;
-            background: #FFE4F0;
+            background: #FFD4C8;
             border-radius: 10px;
             overflow: hidden;
             margin: 30px 0;
@@ -291,7 +297,7 @@
         }
 
         .imc-card {
-            background: #FFF3F8;
+            background: #FFF0EB;
             padding: 20px;
             border-radius: 15px;
             margin: 20px 0;
@@ -347,7 +353,7 @@
 
         .testimonial {
             background: white;
-            border: 2px solid #FFE4F0;
+            border: 2px solid #FFD4C8;
             border-radius: 15px;
             padding: 20px;
             margin: 20px 0;
@@ -435,10 +441,8 @@
     <div class="container">
         <!-- Logo -->
         <div class="logo-container">
-            <div class="logo editable">
-                <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #FF1493, #FF69B4); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                    <span style="color: white; font-size: 18px; font-weight: bold;">LOGO<br>AQUI</span>
-                </div>
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/Jonez005/quiz-sal-rosa/main/logo.png.png" alt="Recetita del Sal Rosa">
             </div>
         </div>
 
@@ -680,13 +684,13 @@
 
             <h3 style="margin: 20px 0;">⚠️ Algunas señales de alerta:</h3>
 
-            <div style="margin: 10px 0; padding: 10px; background: #FFF3F8; border-radius: 10px;">
+            <div style="margin: 10px 0; padding: 10px; background: #FFF0EB; border-radius: 10px;">
                 ⚠️ ❌ Metabolismo lento y dificultad para adelgazar incluso comiendo poco
             </div>
-            <div style="margin: 10px 0; padding: 10px; background: #FFF3F8; border-radius: 10px;">
+            <div style="margin: 10px 0; padding: 10px; background: #FFF0EB; border-radius: 10px;">
                 ⚠️ ❌ Cansancio constante y sensación de hinchazón
             </div>
-            <div style="margin: 10px 0; padding: 10px; background: #FFF3F8; border-radius: 10px;">
+            <div style="margin: 10px 0; padding: 10px; background: #FFF0EB; border-radius: 10px;">
                 ⚠️ ❌ Acumulación de grasa en áreas específicas del cuerpo, principalmente en la barriga
             </div>
 
@@ -720,10 +724,10 @@
 
             <h3 style="margin: 20px 0 10px 0;">Comparación:</h3>
 
-            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF3F8; border-radius: 10px;">
+            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF0EB; border-radius: 10px;">
                 <strong>Metabolismo</strong>
                 <div style="flex: 1; margin: 0 10px;">
-                    <div style="height: 8px; background: #FFE4F0; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 8px; background: #FFD4C8; border-radius: 5px; overflow: hidden;">
                         <div style="width: 40%; height: 100%; background: linear-gradient(90deg, #ff4444, #ffaa44);"></div>
                     </div>
                     <div style="display: flex; justify-content: space-between; font-size: 10px; margin-top: 5px;">
@@ -733,10 +737,10 @@
                 </div>
             </div>
 
-            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF3F8; border-radius: 10px;">
+            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF0EB; border-radius: 10px;">
                 <strong>Estrés</strong>
                 <div style="flex: 1; margin: 0 10px;">
-                    <div style="height: 8px; background: #FFE4F0; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 8px; background: #FFD4C8; border-radius: 5px; overflow: hidden;">
                         <div style="width: 60%; height: 100%; background: linear-gradient(90deg, #ff4444, #ffaa44);"></div>
                     </div>
                     <div style="display: flex; justify-content: space-between; font-size: 10px; margin-top: 5px;">
@@ -746,10 +750,10 @@
                 </div>
             </div>
 
-            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF3F8; border-radius: 10px;">
+            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF0EB; border-radius: 10px;">
                 <strong>Energía</strong>
                 <div style="flex: 1; margin: 0 10px;">
-                    <div style="height: 8px; background: #FFE4F0; border-radius: 5px; overflow: hidden;">
+                    <div style="height: 8px; background: #FFD4C8; border-radius: 5px; overflow: hidden;">
                         <div style="width: 35%; height: 100%; background: linear-gradient(90deg, #ff4444, #ffaa44);"></div>
                     </div>
                     <div style="display: flex; justify-content: space-between; font-size: 10px; margin-top: 5px;">
@@ -759,7 +763,7 @@
                 </div>
             </div>
 
-            <div style="background: #FFF3F8; padding: 20px; border-radius: 15px; margin: 20px 0;">
+            <div style="background: #FFF0EB; padding: 20px; border-radius: 15px; margin: 20px 0;">
                 <h3 style="color: #FF1493; margin-bottom: 15px;">¿Cómo funciona el Plan?</h3>
                 <p style="margin-bottom: 15px;">Con base en tus informaciones personales y objetivos, creamos un plan 100% personalizado para que uses la Sal Rosa del Himalaya. Nuestra fórmula casera está desarrollada para potencializar tu pérdida de peso en 4 semanas, respetando tu estilo de vida, tus limitaciones y tu rutina. No necesitas preocuparte, nosotros te guiaremos en qué comer.</p>
 
@@ -822,21 +826,21 @@
 
             <h1 style="background: #FF1493; color: white; padding: 15px; border-radius: 10px; text-align: center; margin-bottom: 20px;">TODO LO QUE VAS A RECIBIR HOY:</h1>
 
-            <div style="background: #FFF3F8; padding: 15px; border-radius: 10px; margin: 10px 0;">
+            <div style="background: #FFF0EB; padding: 15px; border-radius: 10px; margin: 10px 0;">
                 ✅ <strong>Sal Rosa del Himalaya Completo</strong><br>
                 <small>y Paso a Paso de cómo usar.</small>
             </div>
 
-            <div style="background: #FFF3F8; padding: 15px; border-radius: 10px; margin: 10px 0;">
+            <div style="background: #FFF0EB; padding: 15px; border-radius: 10px; margin: 10px 0;">
                 ✅ <strong>Detox Exclusivo de 7 Días</strong>
             </div>
 
-            <div style="background: #FFF3F8; padding: 15px; border-radius: 10px; margin: 10px 0;">
+            <div style="background: #FFF0EB; padding: 15px; border-radius: 10px; margin: 10px 0;">
                 ✅ <strong>Soporte Exclusivo</strong><br>
                 <small>durante el proceso de la Sal Rosa.</small>
             </div>
 
-            <div style="background: #FFF3F8; padding: 15px; border-radius: 10px; margin: 10px 0;">
+            <div style="background: #FFF0EB; padding: 15px; border-radius: 10px; margin: 10px 0;">
                 ✅ <strong>Pago Único</strong><br>
                 <small>¡sin mensualidades!</small>
             </div>
