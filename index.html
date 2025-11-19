@@ -17,7 +17,7 @@
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             padding: 20px;
         }
 
@@ -28,25 +28,27 @@
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
             overflow: hidden;
+            margin: 20px auto;
         }
 
         .logo-container {
             text-align: center;
-            padding: 30px 20px 20px;
+            padding: 20px 20px 15px;
             background: white;
         }
 
         .logo {
-            width: 200px;
-            height: auto;
+            width: 120px;
+            height: 120px;
             margin: 0 auto;
         }
 
         .logo img {
             width: 100%;
-            height: auto;
-            object-fit: contain;
+            height: 100%;
+            object-fit: cover;
             display: block;
+            border-radius: 10px;
         }
 
         .progress-bar {
