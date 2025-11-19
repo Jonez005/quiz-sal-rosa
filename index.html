@@ -403,7 +403,6 @@
             color: #666;
         }
 
-        /* EDITABLE SECTIONS - HIGHLIGHTED */
         .editable {
             border: 2px dashed #FF1493;
             padding: 10px;
@@ -442,7 +441,7 @@
         <!-- Logo -->
         <div class="logo-container">
             <div class="logo">
-                <img src="https://raw.githubusercontent.com/Jonez005/quiz-sal-rosa/main/logo.png.png" alt="Recetita del Sal Rosa">
+                <img src="https://raw.githubusercontent.com/Jonez005/quiz-sal-rosa/main/logo.png.png.jpeg" alt="Recetita del Sal Rosa">
             </div>
         </div>
 
@@ -473,169 +472,6 @@
             <h1>¿Cuántos kilos <span class="highlight">deseas perder?</span></h1>
             <p class="subtitle">El protocolo de Sal Rosa del Himalaya ayuda a eliminar grasa de forma acelerada.</p>
 
-            <div class="option" onclick="selectOption(this, 'goal', 'hasta5'); nextPage();">
-                Hasta 5kg
-            </div>
-            <div class="option" onclick="selectOption(this, 'goal', '6a10'); nextPage();">
-                De 6 a 10 kg
-            </div>
-            <div class="option" onclick="selectOption(this, 'goal', '11a15'); nextPage();">
-                De 11 a 15 kg
-            </div>
-            <div class="option" onclick="selectOption(this, 'goal', '16a20'); nextPage();">
-                De 16 a 20 kg
-            </div>
-            <div class="option" onclick="selectOption(this, 'goal', 'mais20'); nextPage();">
-                Más de 20 kg
-            </div>
-        </div>
-
-        <!-- PÁGINA 3: Como classificaria seu corpo -->
-        <div class="page" id="page3">
-            <h1>¿Cómo clasificarías tu <span class="highlight">cuerpo hoy?</span></h1>
-
-            <div class="option" onclick="selectOption(this, 'body', 'regular'); nextPage();">
-                Regular
-            </div>
-            <div class="option" onclick="selectOption(this, 'body', 'flacido'); nextPage();">
-                Flácido
-            </div>
-            <div class="option" onclick="selectOption(this, 'body', 'sobrepeso'); nextPage();">
-                Sobrepeso
-            </div>
-        </div>
-
-        <!-- PÁGINA 4: Área para reduzir gordura -->
-        <div class="page" id="page4">
-            <h1>¿En qué área de tu cuerpo te gustaría <span class="highlight">reducir más grasa?</span></h1>
-
-            <div class="option" onclick="selectOption(this, 'area', 'cartucheras'); nextPage();">
-                Región de los Cartucheras
-            </div>
-            <div class="option" onclick="selectOption(this, 'area', 'muslos'); nextPage();">
-                Región de los Muslos
-            </div>
-            <div class="option" onclick="selectOption(this, 'area', 'abdomen'); nextPage();">
-                Región del Abdomen (barriga)
-            </div>
-            <div class="option" onclick="selectOption(this, 'area', 'gluteos'); nextPage();">
-                Región de los Glúteos
-            </div>
-            <div class="option" onclick="selectOption(this, 'area', 'brazos'); nextPage();">
-                Región de los Brazos
-            </div>
-        </div>
-
-        <!-- PÁGINA 5: Nome -->
-        <div class="page" id="page5">
-            <h1>¿Cuál es tu <span class="highlight">nombre?</span></h1>
-            <p class="subtitle">Para armar tu plan personalizado, necesitamos tu nombre. Quédate tranquila, tus datos están protegidos 🔒</p>
-
-            <input type="text" class="input-field" id="userName" placeholder="Escribe tu nombre">
-
-            <button class="button" onclick="saveName(); nextPage();">Continuar</button>
-        </div>
-
-        <!-- PÁGINA 6: Impacto do peso -->
-        <div class="page" id="page6">
-            <h1><span id="userNameDisplay">Amiga</span>, dime <span class="highlight">¿cómo tu peso impacta tu vida?</span></h1>
-
-            <div class="option" onclick="selectOption(this, 'impact', 'fotos'); nextPage();">
-                📷 Evito tomar fotos porque tengo vergüenza
-            </div>
-            <div class="option" onclick="selectOption(this, 'impact', 'pareja'); nextPage();">
-                💔 Mi pareja no me mira más con deseo como antes
-            </div>
-            <div class="option" onclick="selectOption(this, 'impact', 'social'); nextPage();">
-                😳 Evito encuentros sociales porque no me siento bien conmigo misma
-            </div>
-            <div class="option" onclick="selectOption(this, 'impact', 'ninguna'); nextPage();">
-                👏 Ninguna de las opciones
-            </div>
-        </div>
-
-        <!-- PÁGINA 7: Feliz com aparência -->
-        <div class="page" id="page7">
-            <h1>¿Estás realmente <span class="highlight">feliz con tu apariencia?</span></h1>
-
-            <div class="option" onclick="selectOption(this, 'happy', 'no'); nextPage();">
-                😔 No, porque me siento con sobrepeso
-            </div>
-            <div class="option" onclick="selectOption(this, 'happy', 'sim'); nextPage();">
-                💔 Sí, pero sé que puedo mejorar mi salud
-            </div>
-            <div class="option" onclick="selectOption(this, 'happy', 'mejorar'); nextPage();">
-                😊 No, me gustaría perder peso para mejorar mi bienestar
-            </div>
-        </div>
-
-        <!-- PÁGINA 8: O que impede -->
-        <div class="page" id="page8">
-            <h1>¿Qué es lo que más te <span class="highlight">impide adelgazar?</span></h1>
-
-            <div class="option" onclick="selectOption(this, 'obstacle', 'tempo'); nextPage();">
-                <div>
-                    <strong>⏰ Falta de tiempo</strong><br>
-                    <small>Rutina agitada.</small>
-                </div>
-            </div>
-            <div class="option" onclick="selectOption(this, 'obstacle', 'autocontrol'); nextPage();">
-                <div>
-                    <strong>🤪 Autocontrol</strong><br>
-                    <small>Dificultad para resistir tentaciones alimentarias.</small>
-                </div>
-            </div>
-            <div class="option" onclick="selectOption(this, 'obstacle', 'financiero'); nextPage();">
-                <div>
-                    <strong>💰 Financiero</strong><br>
-                    <small>Encontrar opciones saludables más caras que alimentos procesados.</small>
-                </div>
-            </div>
-        </div>
-
-        <!-- PÁGINA 9: Benefícios desejados -->
-        <div class="page" id="page9">
-            <h1>¿Cuáles de estos <span class="highlight">beneficios te gustaría tener?</span></h1>
-            <p class="subtitle">👉 Vamos a personalizar tu fórmula para maximizar los resultados.</p>
-
-            <div class="option checkbox-option">
-                <input type="checkbox" id="benefit1">
-                📋 Adelgazar sin esfuerzo y sin efecto rebote
-            </div>
-            <div class="option checkbox-option">
-                <input type="checkbox" id="benefit2">
-                📋 Sueño más profundo
-            </div>
-            <div class="option checkbox-option">
-                <input type="checkbox" id="benefit3">
-                📋 Más energía y disposición durante el día
-            </div>
-            <div class="option checkbox-option">
-                <input type="checkbox" id="benefit4">
-                📋 Aumento de la autoestima y confianza
-            </div>
-            <div class="option checkbox-option">
-                <input type="checkbox" id="benefit5">
-                📋 Reducción del estrés y ansiedad
-            </div>
-
-            <button class="button" onclick="nextPage()">Continuar</button>
-        </div>
-
-        <!-- PÁGINA 15: Água por dia -->
-        <div class="page" id="page15">
-            <h1>¿Cuántos <span class="highlight">vasos de agua</span> bebes por día?</h1>
-            <p class="subtitle">Tu nivel de hidratación también influye en tu pérdida de peso.</p>
-
-            <div class="option" onclick="selectOption(this, 'water', 'cafe'); nextPage();">
-                ☕ Bebo solo café o té
-            </div>
-            <div class="option" onclick="selectOption(this, 'water', '1-2'); nextPage();">
-                💧 1-2 vasos por día
-            </div>
-            <div class="option" onclick="selectOption(this, 'water', '2-6'); nextPage();">
-                💧 2-6 vasos por día
-            </div>
             <div class="option" onclick="selectOption(this, 'water', 'mais6'); nextPage();">
                 💧 Más de 6 vasos
             </div>
@@ -1006,7 +842,7 @@
             } else if (type === 'height') {
                 heightUnit = unit;
                 const buttons = document.querySelectorAll('#page13 .unit-btn');
-                buttons.forEach(btn => btn.classList.remove('active'));
+                buttons.forEach(btn => btn.classList.remove('active');
                 event.target.classList.add('active');
                 updateSlider('height');
             } else if (type === 'goal') {
@@ -1054,7 +890,154 @@
         updateProgress();
     </script>
 </body>
-</html>
+</html>, 'goal', 'hasta5'); nextPage();">
+                Hasta 5kg
+            </div>
+            <div class="option" onclick="selectOption(this, 'goal', '6a10'); nextPage();">
+                De 6 a 10 kg
+            </div>
+            <div class="option" onclick="selectOption(this, 'goal', '11a15'); nextPage();">
+                De 11 a 15 kg
+            </div>
+            <div class="option" onclick="selectOption(this, 'goal', '16a20'); nextPage();">
+                De 16 a 20 kg
+            </div>
+            <div class="option" onclick="selectOption(this, 'goal', 'mais20'); nextPage();">
+                Más de 20 kg
+            </div>
+        </div>
+
+        <!-- PÁGINA 3: Como classificaria seu corpo -->
+        <div class="page" id="page3">
+            <h1>¿Cómo clasificarías tu <span class="highlight">cuerpo hoy?</span></h1>
+
+            <div class="option" onclick="selectOption(this, 'body', 'regular'); nextPage();">
+                Regular
+            </div>
+            <div class="option" onclick="selectOption(this, 'body', 'flacido'); nextPage();">
+                Flácido
+            </div>
+            <div class="option" onclick="selectOption(this, 'body', 'sobrepeso'); nextPage();">
+                Sobrepeso
+            </div>
+        </div>
+
+        <!-- PÁGINA 4: Área para reduzir gordura -->
+        <div class="page" id="page4">
+            <h1>¿En qué área de tu cuerpo te gustaría <span class="highlight">reducir más grasa?</span></h1>
+
+            <div class="option" onclick="selectOption(this, 'area', 'cartucheras'); nextPage();">
+                Región de los Cartucheras
+            </div>
+            <div class="option" onclick="selectOption(this, 'area', 'muslos'); nextPage();">
+                Región de los Muslos
+            </div>
+            <div class="option" onclick="selectOption(this, 'area', 'abdomen'); nextPage();">
+                Región del Abdomen (barriga)
+            </div>
+            <div class="option" onclick="selectOption(this, 'area', 'gluteos'); nextPage();">
+                Región de los Glúteos
+            </div>
+            <div class="option" onclick="selectOption(this, 'area', 'brazos'); nextPage();">
+                Región de los Brazos
+            </div>
+        </div>
+
+        <!-- PÁGINA 5: Nome -->
+        <div class="page" id="page5">
+            <h1>¿Cuál es tu <span class="highlight">nombre?</span></h1>
+            <p class="subtitle">Para armar tu plan personalizado, necesitamos tu nombre. Quédate tranquila, tus datos están protegidos 🔒</p>
+
+            <input type="text" class="input-field" id="userName" placeholder="Escribe tu nombre">
+
+            <button class="button" onclick="saveName(); nextPage();">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 6: Impacto do peso -->
+        <div class="page" id="page6">
+            <h1><span id="userNameDisplay">Amiga</span>, dime <span class="highlight">¿cómo tu peso impacta tu vida?</span></h1>
+
+            <div class="option" onclick="selectOption(this, 'impact', 'fotos'); nextPage();">
+                📷 Evito tomar fotos porque tengo vergüenza
+            </div>
+            <div class="option" onclick="selectOption(this, 'impact', 'pareja'); nextPage();">
+                💔 Mi pareja no me mira más con deseo como antes
+            </div>
+            <div class="option" onclick="selectOption(this, 'impact', 'social'); nextPage();">
+                😳 Evito encuentros sociales porque no me siento bien conmigo misma
+            </div>
+            <div class="option" onclick="selectOption(this, 'impact', 'ninguna'); nextPage();">
+                👏 Ninguna de las opciones
+            </div>
+        </div>
+
+        <!-- PÁGINA 7: Feliz com aparência -->
+        <div class="page" id="page7">
+            <h1>¿Estás realmente <span class="highlight">feliz con tu apariencia?</span></h1>
+
+            <div class="option" onclick="selectOption(this, 'happy', 'no'); nextPage();">
+                😔 No, porque me siento con sobrepeso
+            </div>
+            <div class="option" onclick="selectOption(this, 'happy', 'sim'); nextPage();">
+                💔 Sí, pero sé que puedo mejorar mi salud
+            </div>
+            <div class="option" onclick="selectOption(this, 'happy', 'mejorar'); nextPage();">
+                😊 No, me gustaría perder peso para mejorar mi bienestar
+            </div>
+        </div>
+
+        <!-- PÁGINA 8: O que impede -->
+        <div class="page" id="page8">
+            <h1>¿Qué es lo que más te <span class="highlight">impide adelgazar?</span></h1>
+
+            <div class="option" onclick="selectOption(this, 'obstacle', 'tempo'); nextPage();">
+                <div>
+                    <strong>⏰ Falta de tiempo</strong><br>
+                    <small>Rutina agitada.</small>
+                </div>
+            </div>
+            <div class="option" onclick="selectOption(this, 'obstacle', 'autocontrol'); nextPage();">
+                <div>
+                    <strong>🤪 Autocontrol</strong><br>
+                    <small>Dificultad para resistir tentaciones alimentarias.</small>
+                </div>
+            </div>
+            <div class="option" onclick="selectOption(this, 'obstacle', 'financiero'); nextPage();">
+                <div>
+                    <strong>💰 Financiero</strong><br>
+                    <small>Encontrar opciones saludables más caras que alimentos procesados.</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- PÁGINA 9: Benefícios desejados -->
+        <div class="page" id="page9">
+            <h1>¿Cuáles de estos <span class="highlight">beneficios te gustaría tener?</span></h1>
+            <p class="subtitle">👉 Vamos a personalizar tu fórmula para maximizar los resultados.</p>
+
+            <div class="option checkbox-option">
+                <input type="checkbox" id="benefit1">
+                📋 Adelgazar sin esfuerzo y sin efecto rebote
+            </div>
+            <div class="option checkbox-option">
+                <input type="checkbox" id="benefit2">
+                📋 Sueño más profundo
+            </div>
+            <div class="option checkbox-option">
+                <input type="checkbox" id="benefit3">
+                📋 Más energía y disposición durante el día
+            </div>
+            <div class="option checkbox-option">
+                <input type="checkbox" id="benefit4">
+                📋 Aumento de la autoestima y confianza
+            </div>
+            <div class="option checkbox-option">
+                <input type="checkbox" id="benefit5">
+                📋 Reducción del estrés y ansiedad
+            </div>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
 
         <!-- PÁGINA 10: Explicação do método -->
         <div class="page" id="page10">
@@ -1188,3 +1171,19 @@
 
             <button class="button" onclick="nextPage()">Continuar</button>
         </div>
+
+        <!-- PÁGINA 15: Água por dia -->
+        <div class="page" id="page15">
+            <h1>¿Cuántos <span class="highlight">vasos de agua</span> bebes por día?</h1>
+            <p class="subtitle">Tu nivel de hidratación también influye en tu pérdida de peso.</p>
+
+            <div class="option" onclick="selectOption(this, 'water', 'cafe'); nextPage();">
+                ☕ Bebo solo café o té
+            </div>
+            <div class="option" onclick="selectOption(this, 'water', '1-2'); nextPage();">
+                💧 1-2 vasos por día
+            </div>
+            <div class="option" onclick="selectOption(this, 'water', '2-6'); nextPage();">
+                💧 2-6 vasos por día
+            </div>
+            <div class="option" onclick="selectOption(this
