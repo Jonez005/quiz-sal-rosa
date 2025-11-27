@@ -1,4 +1,38 @@
-<!DOCTYPE html>
+<div class="testimonial editable">
+                <strong>Fernanda Oliveira</strong><br>
+                <small>Medellín - Colombia</small>
+                <p style="margin-top: 10px;">Ya había intentado de todo para adelgazar, pero nada funcionaba. Después de incluir la fórmula de la Sal Rosa del Himalaya en mi rutina, perdí 11kg sin cambiar nada en mi alimentación. Ahora me siento más confiante y energizada. ¡Gracias por cambiar mi vida!</p>
+                <div style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div class="testimonial editable">
+                <strong>Karoline Santos</strong><br>
+                <small>Buenos Aires - Argentina</small>
+                <p style="margin-top: 10px;">Gente, yo nunca lograba adelgazar y dejar de comer azúcar. Parecía una locura, pero la Sal Rosa del Himalaya cambió todo. Ya no siento ganas de comer dulce. Todo lo que intentaba no funcionaba, pero esto sí funcionó. Solo seguí el paso a paso correctamente y dio resultado. ¡9kg en apenas 30 días!</p>
+                <div style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <strong>Carlos Mendoza</strong><br>
+                <small>Ciudad de México - México</small>
+                <p style="margin-top: 10px;">Hermano, llevaba años intentando bajar la panza cervecera y nada me funcionaba. Un amigo me recomendó la Sal Rosa del Himalaya y decidí probarlo. En 6 semanas perdí 13kg, la energía subió un montón y hasta mi presión arterial mejoró. Mi esposa no lo podía creer. ¡Esto es real, funciona!</p>
+                <div style="background: #E6F3FF; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center; color: #0066CC;">
+                    [FOTO ANTES/DEPOIS MASCULINO 1]
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <strong>Diego Ramírez</strong><br>
+                <small>Lima - Perú</small>
+                <p style="margin-top: 10px;">Tenía 38 años y pesaba 98kg, me sentía cansado todo el tiempo. Después de usar la Sal Rosa del Himalaya durante 2 meses, bajé a 82kg. Lo mejor es que no pasé hambre ni tuve que hacer ejercicio extremo. Recuperé mi confianza y ahora me veo 10 años más joven. ¡Totalmente recomendado!</p>
+                <div style="background: #E6F3FF; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center; color: #0066CC;">
+                    [FOTO ANTES/DEPOIS MASCULINO 2]
+                </div>
+            </div><!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -403,6 +437,27 @@
             color: #666;
         }
 
+        /* EDITABLE SECTIONS - HIGHLIGHTED */
+        .editable {
+            border: 2px dashed #FF1493;
+            padding: 10px;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .editable::before {
+            content: "✏️ EDITÁVEL";
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            background: #FF1493;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
         @media (max-width: 600px) {
             .container {
                 border-radius: 0;
@@ -418,12 +473,14 @@
 </head>
 <body>
     <div class="container">
+        <!-- Logo -->
         <div class="logo-container">
             <div class="logo">
                 <img src="https://raw.githubusercontent.com/Jonez005/quiz-sal-rosa/main/logo.png.jpeg" alt="Recetita del Sal Rosa">
             </div>
         </div>
 
+        <!-- Progress Bar -->
         <div class="progress-bar">
             <div class="progress-fill" id="progressBar"></div>
         </div>
@@ -433,7 +490,7 @@
             <h1>Elimina hasta <span class="highlight">15kg de grasa</span> en 30 días con esta nueva receta de Sal Rosa</h1>
             
             <div class="hero-image">
-                <img src="https://raw.githubusercontent.com/Jonez005/quiz-sal-rosa/main/logo.png.jpeg" alt="Recetita del Sal Rosa">
+                <img src="https://raw.githubusercontent.com/Jonez005/quiz-sal-rosa/main/logo.png.jpeg" alt="Recetita del Sal Rosa" style="width: 100%; height: 100%; object-fit: contain; border-radius: 15px;">
             </div>
 
             <div class="attention-box">
@@ -443,7 +500,7 @@
             <button class="button" onclick="nextPage()">HACER TEST GRATIS</button>
         </div>
 
-        <!-- PÁGINA 2: Cuántos kilos quiere perder -->
+        <!-- PÁGINA 2: Quantos quilos quer perder -->
         <div class="page" id="page2">
             <h1>¿Cuántos kilos <span class="highlight">deseas perder?</span></h1>
             <p class="subtitle">El protocolo de Sal Rosa del Himalaya ayuda a eliminar grasa de forma acelerada.</p>
@@ -465,7 +522,7 @@
             </div>
         </div>
 
-        <!-- PÁGINA 3: Cómo clasificaría su cuerpo -->
+        <!-- PÁGINA 3: Como classificaria seu corpo -->
         <div class="page" id="page3">
             <h1>¿Cómo clasificarías tu <span class="highlight">cuerpo hoy?</span></h1>
 
@@ -480,7 +537,7 @@
             </div>
         </div>
 
-        <!-- PÁGINA 4: Área para reducir grasa -->
+        <!-- PÁGINA 4: Área para reduzir gordura -->
         <div class="page" id="page4">
             <h1>¿En qué área de tu cuerpo te gustaría <span class="highlight">reducir más grasa?</span></h1>
 
@@ -501,19 +558,19 @@
             </div>
         </div>
 
-        <!-- PÁGINA 5: Nombre -->
+        <!-- PÁGINA 5: Nome -->
         <div class="page" id="page5">
             <h1>¿Cuál es tu <span class="highlight">nombre?</span></h1>
-            <p class="subtitle">Para armar tu plan personalizado, necesitamos tu nombre. Quédate tranquilo(a), tus datos están protegidos 🔒</p>
+            <p class="subtitle">Para armar tu plan personalizado, necesitamos tu nombre. Quédate tranquila, tus datos están protegidos 🔒</p>
 
             <input type="text" class="input-field" id="userName" placeholder="Escribe tu nombre">
 
             <button class="button" onclick="saveName(); nextPage();">Continuar</button>
         </div>
 
-        <!-- PÁGINA 6: Impacto del peso -->
+        <!-- PÁGINA 6: Impacto do peso -->
         <div class="page" id="page6">
-            <h1><span id="userNameDisplay">Amigo(a)</span>, dime <span class="highlight">¿cómo tu peso impacta tu vida?</span></h1>
+            <h1><span id="userNameDisplay">Amiga</span>, dime <span class="highlight">¿cómo tu peso impacta tu vida?</span></h1>
 
             <div class="option" onclick="selectOption(this, 'impact', 'fotos'); nextPage();">
                 📷 Evito tomar fotos porque tengo vergüenza
@@ -522,14 +579,14 @@
                 💔 Mi pareja no me mira más con deseo como antes
             </div>
             <div class="option" onclick="selectOption(this, 'impact', 'social'); nextPage();">
-                😳 Evito encuentros sociales porque no me siento bien conmigo mismo(a)
+                😳 Evito encuentros sociales porque no me siento bien conmigo misma
             </div>
             <div class="option" onclick="selectOption(this, 'impact', 'ninguna'); nextPage();">
                 👏 Ninguna de las opciones
             </div>
         </div>
 
-        <!-- PÁGINA 7: Feliz con apariencia -->
+        <!-- PÁGINA 7: Feliz com aparência -->
         <div class="page" id="page7">
             <h1>¿Estás realmente <span class="highlight">feliz con tu apariencia?</span></h1>
 
@@ -544,7 +601,7 @@
             </div>
         </div>
 
-        <!-- PÁGINA 8: Qué impide -->
+        <!-- PÁGINA 8: O que impede -->
         <div class="page" id="page8">
             <h1>¿Qué es lo que más te <span class="highlight">impide adelgazar?</span></h1>
 
@@ -568,7 +625,7 @@
             </div>
         </div>
 
-        <!-- PÁGINA 9: Beneficios deseados -->
+        <!-- PÁGINA 9: Benefícios desejados -->
         <div class="page" id="page9">
             <h1>¿Cuáles de estos <span class="highlight">beneficios te gustaría tener?</span></h1>
             <p class="subtitle">👉 Vamos a personalizar tu fórmula para maximizar los resultados.</p>
@@ -597,136 +654,7 @@
             <button class="button" onclick="nextPage()">Continuar</button>
         </div>
 
-        <!-- PÁGINA 10: Explicación del método -->
-        <div class="page" id="page10">
-            <h1 style="font-size: 22px; line-height: 1.4;">¡La <span class="highlight">Sal Rosa del Himalaya</span> Que Está Haciendo Que Miles de Personas Adelgacen Sin Gastar Una Fortuna en Farmacia!</h1>
-            
-            <p class="subtitle">Descubre el método casero, 100% seguro y natural, que imita los efectos del Mounjaro Ozempic y Zepbound — controlando tu hambre, acelerando el metabolismo y haciéndote perder peso de forma rápida y definitiva. Sin inyecciones, sin gastar ríos de dinero y sin depender de médico charlatán.</p>
-
-            <div class="hero-image">
-                <img src="https://raw.githubusercontent.com/Jonez005/quiz-sal-rosa/main/açao.png.jpeg" alt="Cómo funciona el Truco de la Sal Rosa">
-            </div>
-
-            <p class="subtitle">La Sal Rosa del Himalaya actúa mientras duermes, acelerando la quema de grasa a través del estímulo natural del metabolismo y del equilibrio hormonal nocturno.</p>
-
-            <button class="button" onclick="nextPage()">Continuar</button>
-        </div>
-
-        <!-- PÁGINA 11: Testimonios -->
-        <div class="page" id="page11">
-            <h1>🔥 <span class="highlight">¡Historias Reales de Transformación!</span></h1>
-
-            <div class="testimonial">
-                <strong>María Fernanda Rodríguez</strong><br>
-                <small>Medellín - Colombia</small>
-                <p style="margin-top: 10px;">Ya había intentado de todo para adelgazar, pero nada funcionaba. Después de incluir la fórmula de la Sal Rosa del Himalaya en mi rutina, perdí 11kg sin cambiar nada en mi alimentación. Ahora me siento más confiante y energizada. ¡Gracias por cambiar mi vida!</p>
-                <div style="margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="Maria.png.jpeg" alt="Transformación María Fernanda" style="width: 100%; height: auto; display: block;">
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <strong>Carolina Martínez</strong><br>
-                <small>Bogotá - Colombia</small>
-                <p style="margin-top: 10px;">Gente, yo nunca lograba adelgazar y dejar de comer azúcar. Parecía una locura, pero la Sal Rosa del Himalaya cambió todo. Ya no siento ganas de comer dulce. Todo lo que intentaba no funcionaba, pero esto sí funcionó. Solo seguí el paso a paso correctamente y dio resultado. ¡9kg en apenas 30 días!</p>
-                <div style="margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="Carolina.png.jpeg" alt="Transformación Carolina" style="width: 100%; height: auto; display: block;">
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <strong>Carlos Andrés Gómez</strong><br>
-                <small>Cali - Colombia</small>
-                <p style="margin-top: 10px;">Hermano, tenía la barriga enorme y ya no podía ni jugar fútbol con mis hijos sin cansarme. Empecé con la Sal Rosa hace 2 meses y ya bajé 13kg. Mi esposa dice que parezco otro hombre. Lo mejor es que no tuve que matarme en el gimnasio ni pasar hambre. ¡Esto funciona de verdad! 💪</p>
-                <div style="margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="Carlos.png.jpeg" alt="Transformación Carlos Andrés" style="width: 100%; height: auto; display: block;">
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <strong>Miguel Ángel Torres</strong><br>
-                <small>Cartagena - Colombia</small>
-                <p style="margin-top: 10px;">Estaba con sobrepeso hace años y mi médico me dijo que tenía que bajar urgente por mi salud. Probé la Sal Rosa del Himalaya y en 45 días perdí 16kg. Ahora puedo correr, jugar con mis nietos y me siento 10 años más joven. Si yo pude, cualquiera puede. ¡Totalmente recomendado! 🔥</p>
-                <div style="margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="miguel.png.jpeg" alt="Transformación Miguel Ángel" style="width: 100%; height: auto; display: block;">
-                </div>
-            </div>
-
-            <button class="button" onclick="nextPage()">Continuar</button>
-        </div>
-
-        <!-- PÁGINA 12: Peso actual -->
-        <div class="page" id="page12">
-            <h1>¿Cuál es tu <span class="highlight">peso actual?</span></h1>
-            <p class="subtitle">¡Estamos casi listos! Vamos a ajustar tu plan de acuerdo con tu cuerpo.</p>
-
-            <div class="unit-toggle">
-                <button class="unit-btn active" onclick="toggleUnit('weight', 'kg')">kg</button>
-                <button class="unit-btn" onclick="toggleUnit('weight', 'lb')">lb</button>
-            </div>
-
-            <div class="slider-container">
-                <div class="slider-value" id="weightValue">70kg</div>
-                <input type="range" min="40" max="150" value="70" class="slider" id="weightSlider" oninput="updateSlider('weight')">
-                <div class="slider-labels">
-                    <span>40</span>
-                    <span style="font-size: 10px;">Arrastra para ajustar</span>
-                    <span>150</span>
-                </div>
-            </div>
-
-            <p class="subtitle">Basado en esto, ¡ajustaremos la dosis ideal para los mejores resultados!</p>
-
-            <button class="button" onclick="saveWeight(); nextPage();">Continuar</button>
-        </div>
-
-        <!-- PÁGINA 13: Altura -->
-        <div class="page" id="page13">
-            <h1>¿Cuál es tu <span class="highlight">altura?</span></h1>
-            <p class="subtitle">Esto nos ayudará a calcular la cantidad exacta de la Sal Rosa del Himalaya para tu cuerpo.</p>
-
-            <div class="unit-toggle">
-                <button class="unit-btn active" onclick="toggleUnit('height', 'cm')">cm</button>
-                <button class="unit-btn" onclick="toggleUnit('height', 'in')">in</button>
-            </div>
-
-            <div class="slider-container">
-                <div class="slider-value" id="heightValue">170cm</div>
-                <input type="range" min="140" max="210" value="170" class="slider" id="heightSlider" oninput="updateSlider('height')">
-                <div class="slider-labels">
-                    <span>140</span>
-                    <span style="font-size: 10px;">Arrastra para ajustar</span>
-                    <span>210</span>
-                </div>
-            </div>
-
-            <button class="button" onclick="saveHeight(); nextPage();">Continuar</button>
-        </div>
-
-        <!-- PÁGINA 14: Peso deseado -->
-        <div class="page" id="page14">
-            <h1>¿Cuál es tu <span class="highlight">objetivo de peso</span> (deseado)?</h1>
-            <p class="subtitle">Esto nos ayudará a personalizar un plan específicamente para ti.</p>
-
-            <div class="unit-toggle">
-                <button class="unit-btn active" onclick="toggleUnit('goal', 'kg')">kg</button>
-                <button class="unit-btn" onclick="toggleUnit('goal', 'lb')">lb</button>
-            </div>
-
-            <div class="slider-container">
-                <div class="slider-value" id="goalValue">60kg</div>
-                <input type="range" min="35" max="120" value="60" class="slider" id="goalSlider" oninput="updateSlider('goal')">
-                <div class="slider-labels">
-                    <span>35</span>
-                    <span style="font-size: 10px;">Arrastra para ajustar</span>
-                    <span>120</span>
-                </div>
-            </div>
-
-            <button class="button" onclick="nextPage()">Continuar</button>
-        </div>
-
-        <!-- PÁGINA 15: Água por día -->
+        <!-- PÁGINA 15: Água por dia -->
         <div class="page" id="page15">
             <h1>¿Cuántos <span class="highlight">vasos de agua</span> bebes por día?</h1>
             <p class="subtitle">Tu nivel de hidratación también influye en tu pérdida de peso.</p>
@@ -754,7 +682,11 @@
                     <div class="loading-progress"></div>
                 </div>
 
-                <p style="text-align: center; color: #666; margin-top: 20px;">Calculando tu plan personalizado...</p>
+                <div class="hero-image editable">
+                    <div style="background: #FFE4F0; height: 200px; display: flex; align-items: center; justify-content: center; color: #FF1493;">
+                        [IMAGEM ANTES/DEPOIS]<br>Día 01 → Día 30<br>-12kg
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -774,7 +706,12 @@
                     <div>Sobrepeso</div>
                     <div class="obesidade">Obesidad</div>
                 </div>
-                <p style="text-align: center; color: #ff4444; font-weight: bold;">⚠️ Zona de Alerta</p>
+                <p style="text-align: center; color: #ff4444; font-weight: bold;">⚠️ Zona de Alerta - ¡Tu resultado!</p>
+            </div>
+
+            <div class="alert-box">
+                <strong>⚠️ ¡Tu metabolismo puede estar saboteándose sin que te des cuenta!</strong>
+                <p style="margin-top: 10px;">Aun estando en el peso normal, tu cuerpo puede estar reteniendo toxinas de forma más lenta, dificultando la quema de grasa y dejándote con menos energía.</p>
             </div>
 
             <h3 style="margin: 20px 0;">⚠️ Algunas señales de alerta:</h3>
@@ -794,21 +731,78 @@
                 <p style="margin-top: 10px;">✅ La combinación ideal de ingredientes puede activar tu metabolismo, reducir la retención de líquidos y aumentar tu disposición.</p>
             </div>
 
+            <div style="background: #E6FFF0; padding: 15px; border-radius: 10px; text-align: center; margin: 20px 0;">
+                <strong>🔥 ¡Descubre ahora cómo la Sal Rosa del Himalaya puede transformar tu cuerpo!</strong>
+            </div>
+
+            <div class="hero-image editable">
+                <div style="background: #FFE4F0; height: 200px; display: flex; align-items: center; justify-content: center; color: #FF1493;">
+                    [TRANSFORMAÇÃO DE EXEMPLO]
+                </div>
+            </div>
+
             <button class="button" onclick="nextPage()">Continuar</button>
         </div>
 
-        <!-- PÁGINA 18: Está lista para transformar -->
+        <!-- PÁGINA 18: Está pronta para transformar -->
         <div class="page" id="page18">
-            <h1><span id="userNameDisplay3">Amigo(a)</span>, ¿estás listo(a) para <span class="highlight">transformar tu cuerpo</span> y tu <span class="highlight">salud?</span></h1>
+            <h1><span id="userNameDisplay3">Amiga</span>, ¿estás lista para <span class="highlight">transformar tu cuerpo</span> y tu <span class="highlight">salud?</span></h1>
+
+            <div class="hero-image editable">
+                <div style="background: #FFE4F0; height: 200px; display: flex; align-items: center; justify-content: center; color: #FF1493;">
+                    Esta eres tú con <span id="currentWeight">70</span> kg,<br>antes de la Sal Rosa
+                </div>
+            </div>
+
+            <h3 style="margin: 20px 0 10px 0;">Comparación:</h3>
+
+            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF0EB; border-radius: 10px;">
+                <strong>Metabolismo</strong>
+                <div style="flex: 1; margin: 0 10px;">
+                    <div style="height: 8px; background: #FFD4C8; border-radius: 5px; overflow: hidden;">
+                        <div style="width: 40%; height: 100%; background: linear-gradient(90deg, #ff4444, #ffaa44);"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 10px; margin-top: 5px;">
+                        <span>Lento</span>
+                        <span>Acelerado</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF0EB; border-radius: 10px;">
+                <strong>Estrés</strong>
+                <div style="flex: 1; margin: 0 10px;">
+                    <div style="height: 8px; background: #FFD4C8; border-radius: 5px; overflow: hidden;">
+                        <div style="width: 60%; height: 100%; background: linear-gradient(90deg, #ff4444, #ffaa44);"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 10px; margin-top: 5px;">
+                        <span>Alto</span>
+                        <span>Bajo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin: 15px 0; padding: 15px; background: #FFF0EB; border-radius: 10px;">
+                <strong>Energía</strong>
+                <div style="flex: 1; margin: 0 10px;">
+                    <div style="height: 8px; background: #FFD4C8; border-radius: 5px; overflow: hidden;">
+                        <div style="width: 35%; height: 100%; background: linear-gradient(90deg, #ff4444, #ffaa44);"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 10px; margin-top: 5px;">
+                        <span>Débil</span>
+                        <span>Fuerte</span>
+                    </div>
+                </div>
+            </div>
 
             <div style="background: #FFF0EB; padding: 20px; border-radius: 15px; margin: 20px 0;">
                 <h3 style="color: #FF1493; margin-bottom: 15px;">¿Cómo funciona el Plan?</h3>
-                <p style="margin-bottom: 15px;">Con base en tus informaciones personales y objetivos, creamos un plan 100% personalizado para que uses la Sal Rosa del Himalaya. Nuestra fórmula casera está desarrollada para potencializar tu pérdida de peso en 4 semanas, respetando tu estilo de vida, tus limitaciones y tu rutina.</p>
+                <p style="margin-bottom: 15px;">Con base en tus informaciones personales y objetivos, creamos un plan 100% personalizado para que uses la Sal Rosa del Himalaya. Nuestra fórmula casera está desarrollada para potencializar tu pérdida de peso en 4 semanas, respetando tu estilo de vida, tus limitaciones y tu rutina. No necesitas preocuparte, nosotros te guiaremos en qué comer.</p>
 
                 <h4 style="color: #FF1493; margin: 15px 0 10px 0;">Tu plan incluye:</h4>
 
                 <div style="margin: 10px 0; padding: 10px; background: #E6FFF0; border-radius: 10px;">
-                    • <strong>Cómo usar la Sal Rosa de la Forma Correcta:</strong> Basado en las investigaciones más recientes, desarrollamos el Protocolo Sal Rosa, la forma más eficaz y segura de usar la Sal Rosa para perder peso.
+                    • <strong>Cómo usar la Sal Rosa de la Forma Correcta:</strong> Basado en las investigaciones más recientes sobre cómo usar sustancias como Liraglutida, desarrollamos el Protocolo Sal Rosa, la forma más eficaz y segura de usar la Sal Rosa para perder peso sin que pierdas músculos o sientas mucha hambre.
                 </div>
 
                 <div style="margin: 10px 0; padding: 10px; background: #E6FFF0; border-radius: 10px;">
@@ -827,28 +821,30 @@
             <button class="button" onclick="nextPage()">Continuar</button>
         </div>
 
-        <!-- PÁGINA 19: Bonus -->
+        <!-- PÁGINA 19: Bônus -->
         <div class="page" id="page19">
             <h1>Al Asegurar Tu <span class="highlight">Sal Rosa del Himalaya</span> Hoy, ¡Recibes Todos los Bonus de Regalo!</h1>
 
-            <div class="bonus-card bonus-1">
-                <div>🌿 BONUS 1: Potencializa la Quema de Grasa</div>
-                <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Sabe exactamente qué comer cuando estés usando la Sal Rosa</p>
-            </div>
+            <div class="editable">
+                <div class="bonus-card bonus-1">
+                    <div>🌿 BONUS 1: Potencializa la Quema de Grasa</div>
+                    <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Sabe exactamente qué comer cuando estés usando la Sal Rosa</p>
+                </div>
 
-            <div class="bonus-card bonus-2">
-                <div>🔥 BONUS 2: Deshinchar en 7 Días</div>
-                <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Aprende la forma más fácil de deshinchar y ver grandes resultados en el espejo en menos de 7 días.</p>
-            </div>
+                <div class="bonus-card bonus-2">
+                    <div>🔥 BONUS 2: Deshinchar en 7 Días</div>
+                    <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Aprende la forma más fácil de deshinchar y ver grandes resultados en el espejo en menos de 7 días.</p>
+                </div>
 
-            <div class="bonus-card bonus-3">
-                <div>⚖️ BONUS 3: Anti-Efecto Rebote</div>
-                <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Descubre cómo mantener el peso perdido y nunca más preocuparte por engordar.</p>
-            </div>
+                <div class="bonus-card bonus-3">
+                    <div>⚖️ BONUS 3: Anti-Efecto Rebote</div>
+                    <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Descubre cómo mantener el peso perdido y nunca más preocuparte por engordar.</p>
+                </div>
 
-            <div class="bonus-card bonus-4">
-                <div>🔥 BONUS 4: Metabolismo PRO 5x</div>
-                <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Aprende las principales estrategias para acelerar tu metabolismo y quemar grasa.</p>
+                <div class="bonus-card bonus-4">
+                    <div>🔥 BONUS 4: Metabolismo PRO 5x</div>
+                    <p style="margin-top: 10px; font-weight: normal; font-size: 14px;">Aprende las principales estrategias para acelerar tu metabolismo y quemar grasa.</p>
+                </div>
             </div>
 
             <button class="button" onclick="nextPage()">Continuar</button>
@@ -857,7 +853,7 @@
         <!-- PÁGINA 20: Oferta Final -->
         <div class="page" id="page20">
             <div style="background: #FF4444; color: white; padding: 15px; text-align: center; border-radius: 10px; margin-bottom: 20px; font-weight: bold;">
-                ⏰ <span id="countdown">05:00</span> - Oferta por tiempo limitado
+                ⏰ <span id="countdown">03:53</span> - Oferta por tiempo limitado
             </div>
 
             <h1 style="background: #FF1493; color: white; padding: 15px; border-radius: 10px; text-align: center; margin-bottom: 20px;">TODO LO QUE VAS A RECIBIR HOY:</h1>
@@ -885,43 +881,15 @@
                 ✅ <strong>¡RECIBES TODOS LOS 4 BONUS ARRIBA HOY!</strong>
             </div>
 
-            <div class="price-box">
-                <div style="background: linear-gradient(135deg, #FFE5E5 0%, #FFF0F0 100%); padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 2px dashed #FF4444;">
-                    <div style="font-size: 22px; color: #666; text-decoration: line-through; margin-bottom: 8px;">Valor Normal: €197,00</div>
-                    <div style="background: #FF4444; color: white; padding: 10px; border-radius: 8px; font-size: 16px; font-weight: bold; animation: blink 1.5s infinite;">
-                        ⚡ ¡DESCUENTO EXPLOSIVO DEL 95% HOY! ⚡
-                    </div>
-                    <div style="font-size: 16px; color: #FF1493; font-weight: bold; margin-top: 10px;">
-                        🎁 De €197 por SOLO €9
-                    </div>
-                </div>
-                <div style="font-size: 20px; color: #333; margin-bottom: 15px; font-weight: bold;">
-                    😱 ¡INCREÍBLE! Por Apenas:
-                </div>
-                <div class="new-price" style="font-size: 72px; color: #FF1493; font-weight: bold; margin: 25px 0; text-shadow: 3px 3px 6px rgba(255,20,147,0.3);">€9,00</div>
-                <div style="background: linear-gradient(135deg, #E6FFF0 0%, #F0FFF4 100%); padding: 18px; border-radius: 10px; margin-top: 20px; border: 2px solid #00CC66;">
-                    <div style="font-size: 18px; color: #00AA00; font-weight: bold; margin-bottom: 8px;">💰 ¡AHORRAS €188,00 AHORA!</div>
-                    <div style="font-size: 14px; color: #006600;">Esto es más del 95% de descuento</div>
-                </div>
-                <div style="background: #FFF9E6; padding: 15px; border-radius: 10px; margin-top: 15px; border-left: 4px solid #FFB800;">
-                    <div style="font-size: 15px; color: #CC8800; font-weight: bold;">⚠️ ÚLTIMA OPORTUNIDAD</div>
-                    <div style="font-size: 13px; color: #996600; margin-top: 5px;">Este precio especial puede terminar en cualquier momento</div>
-                </div>
-                <div style="font-size: 14px; color: #666; margin-top: 20px; line-height: 1.6; font-weight: 500;">
-                    ✨ ¡El Secreto para Deshinchar, Perder Medidas y Sentirte Mejor en Pocos Días!
-                </div>
+            <div class="price-box editable">
+                <div class="old-price">Valor Total: R$ 197</div>
+                <div>🤑 Por Apenas:</div>
+                <div class="new-price">R$ 37,90</div>
+                <div style="font-size: 14px; color: #666;">¡El Secreto para Deshinchar, Perder Medidas y Sentirte Más Linda en Pocos Días!</div>
             </div>
 
-            <style>
-                @keyframes blink {
-                    0%, 100% { opacity: 1; }
-                    50% { opacity: 0.7; }
-                }
-            </style>
-
-            <a href="https://go.hotmart.com/SEU-LINK-AQUI" class="button" style="text-decoration: none; display: block; text-align: center; font-size: 20px; padding: 22px;">
-                ¡Quiero Empezar Hoy por €9! 🔥
-            </a>
+            <!-- EDITE AQUI: Cole o link da sua página de checkout -->
+            <button class="button" onclick="nextPage()">¡Quiero Empezar Hoy! 🔥</button>
 
             <div class="security-badges">
                 <div>🛡️ Satisfacción<br>Garantizada</div>
@@ -931,121 +899,116 @@
 
             <h2 style="text-align: center; margin: 30px 0;">Quien Usa Tiene Resultado 😍 👇</h2>
 
-            <div class="testimonial">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <strong>Isabella Ramírez</strong><br>
-                <small>Buenos Aires - Argentina</small>
-                <p style="margin-top: 10px;">¡Literalmente estoy sin palabras! ¡Mira esto gente! Fueron 2 meses y medio siguiendo sin fallar, gente es increíble esto, no lo esperaba, ¡estoy impactada de verdad! 😱😍</p>
-                <div style="margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="Maria.png.jpeg" alt="Transformación Isabella" style="width: 100%; height: auto; display: block;">
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <strong>Valentina López</strong><br>
-                <small>Santiago - Chile</small>
-                <p style="margin-top: 10px;">Solo yo sé cuánto sufrí intentando adelgazar. Esto fue único, yo juraba que era mentira, pero ahí está el resultado, seguro que pronto las plumas bajan de precio, nadie va a querer estar pinchándose, esto es divino jajaja 😍 🍋</p>
-                <div style="margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="Carolina.png.jpeg" alt="Transformación Valentina" style="width: 100%; height: auto; display: block;">
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <strong>Carlos Andrés Gómez</strong><br>
-                <small>Cali - Colombia</small>
-                <p style="margin-top: 10px;">Hermano, tenía la barriga enorme y ya no podía ni jugar fútbol con mis hijos sin cansarme. Empecé con la Sal Rosa hace 2 meses y ya bajé 13kg. Mi esposa dice que parezco otro hombre. Lo mejor es que no tuve que matarme en el gimnasio ni pasar hambre. ¡Esto funciona de verdad! 💪</p>
-                <div style="margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="Carlos.png.jpeg" alt="Transformación Carlos Andrés" style="width: 100%; height: auto; display: block;">
-                </div>
-            </div>
-
-            <div class="testimonial">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <strong>Miguel Ángel Torres</strong><br>
-                <small>Cartagena - Colombia</small>
-                <p style="margin-top: 10px;">Estaba con sobrepeso hace años y mi médico me dijo que tenía que bajar urgente por mi salud. Probé la Sal Rosa del Himalaya y en 45 días perdí 16kg. Ahora puedo correr, jugar con mis nietos y me siento 10 años más joven. Si yo pude, cualquiera puede. ¡Totalmente recomendado! 🔥</p>
-                <div style="margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <img src="miguel.png.jpeg" alt="Transformación Miguel Ángel" style="width: 100%; height: auto; display: block;">
+            <div class="hero-image editable">
+                <div style="background: #FFE4F0; height: 200px; display: flex; align-items: center; justify-content: center; color: #FF1493;">
+                    [IMAGEM ANTES/DEPOIS]
                 </div>
             </div>
 
             <div class="guarantee-box">
                 <div style="font-size: 40px; margin-bottom: 10px;">🏆</div>
-                <h3 style="color: #FF1493;">GARANTÍA DE 7 DÍAS</h3>
-                <p style="margin-top: 15px; font-weight: bold; color: #333;">La compra de este material es totalmente sin riesgo para ti.</p>
-                <p style="margin-top: 10px; line-height: 1.6;">Si no cumple con tus expectativas en los <strong style="color: #FF1493;">primeros 7 días</strong> después de la compra, te reembolsaremos <strong style="color: #FF1493;">todo el valor que pagaste</strong>, sin hacer preguntas.</p>
-                <div style="background: #FFF0EB; padding: 15px; border-radius: 10px; margin-top: 15px;">
-                    <p style="color: #FF1493; font-weight: bold; font-size: 15px;">📧 Solo tienes que enviar un correo al soporte en:</p>
-                    <p style="color: #FF1493; font-weight: bold; font-size: 16px; margin-top: 8px;">salrosahimalaya@gmail.com</p>
-                </div>
-                <p style="margin-top: 12px; font-size: 13px; color: #666;">*Garantía respaldada por Hotmart - Plataforma 100% Segura</p>
+                <h3>GARANTÍA DE 30 DÍAS</h3>
+                <p style="margin-top: 15px;">La compra de este material es totalmente sin riesgo para ti.</p>
+                <p style="margin-top: 10px;">Si no cumple con tus expectativas en los primeros 30 días después de la compra, te reembolsaremos todo el valor que pagaste, sin hacer preguntas.</p>
+                <p style="margin-top: 15px; color: #FF1493; font-weight: bold;" class="editable">Solo tienes que enviar un correo al soporte en<br>salrosahimalaya@gmail.com</p>
             </div>
 
-            <div style="background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%); color: white; padding: 40px 20px; border-radius: 15px; text-align: center; margin: 30px 0; box-shadow: 0 10px 30px rgba(255,20,147,0.4);">
-                <div style="background: rgba(255,255,255,0.25); display: inline-block; padding: 10px 25px; border-radius: 25px; margin-bottom: 15px;">
-                    <div style="font-size: 15px; font-weight: bold;">🔥 OFERTA MÁS VENDIDA 🔥</div>
-                </div>
-                <h2 style="color: white; margin-bottom: 12px; font-size: 32px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Sal Rosa del Himalaya</h2>
-                <p style="margin-bottom: 15px; font-size: 16px; opacity: 0.95;">✅ Pago Único - Sin Mensualidades</p>
-                
-                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 12px; margin: 20px 0;">
-                    <div style="font-size: 20px; text-decoration: line-through; opacity: 0.8; margin-bottom: 5px;">€197,00</div>
-                    <div style="font-size: 16px; font-weight: bold; background: #FF4444; display: inline-block; padding: 6px 15px; border-radius: 20px; margin: 10px 0;">
-                        ⚡ 95% DE DESCUENTO ⚡
-                    </div>
-                </div>
-
-                <div style="font-size: 70px; font-weight: bold; margin: 25px 0; text-shadow: 3px 3px 6px rgba(0,0,0,0.3); line-height: 1;">€9,00</div>
-                <p style="font-size: 16px; opacity: 0.95; margin-bottom: 15px;">💳 Pago único - Al contado</p>
-                <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 20px;">
-                    <p style="font-size: 14px; margin: 0; opacity: 0.9;">💰 Antes: <span style="text-decoration: line-through;">€197,00</span></p>
-                    <p style="font-size: 18px; margin: 8px 0 0 0; font-weight: bold;">¡Ahorras €188,00 hoy!</p>
-                    <p style="font-size: 13px; margin: 5px 0 0 0; opacity: 0.85;">Eso es más del 95% de descuento</p>
+            <div class="testimonial">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <strong>Isabela Soares</strong><br>
+                <small>São Paulo (SP) - Inició con la fórmula en 18/02/2025</small>
+                <p style="margin-top: 10px;">¡Literalmente estoy sin palabras! ¡Mira esto gente! Fueron 2 meses y medio siguiendo sin fallar, gente es increíble esto, no lo esperaba, ¡estoy impactada de verdad! 😱😍</p>
+                <div class="editable" style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES - ANTES - DEPOIS]
                 </div>
             </div>
 
-            <a href="https://go.hotmart.com/SEU-LINK-AQUI" class="button" style="text-decoration: none; display: block; text-align: center; font-size: 20px; padding: 22px; animation: pulse 2s infinite;">
-                ¡SÍ! Quiero Mi Descuento de €9 Ahora 🔥
+            <div class="testimonial">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <strong>Bruna Gonçalves</strong><br>
+                <small>Itajaí (SC) - Inició con la fórmula en 04/03/2025</small>
+                <p style="margin-top: 10px;">Solo yo sé cuánto sufrí intentando adelgazar. Esto fue único, yo juraba que era mentira, pero ahí está el resultado, seguro que pronto las plumas bajan de precio, nadie va a querer estar pinchándose, esto es divino jajaja 😍 🍋</p>
+                <div class="editable" style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div style="background: #FF1493; color: white; padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h2 style="color: white; margin-bottom: 15px;">MÁS VENDIDO</h2>
+                <h3 style="color: white; margin-bottom: 10px;">Sal Rosa del Himalaya</h3>
+                <p style="margin-bottom: 15px;">Pago Único</p>
+                <div style="font-size: 48px; font-weight: bold; margin: 20px 0;" class="editable">R$ 37,90</div>
+                <p style="font-size: 14px;">al contado</p>
+            </div>
+
+            <button class="button" onclick="nextPage()">¡Quiero Empezar Hoy! 🔥</button>
+
+            <div class="security-badges">
+                <div>🛡️ Satisfacción Garantizada</div>
+                <div>🔒 Compra Segura</div>
+                <div>🔐 Privacidad Protegida</div>
+            </div>
+        </div>
+
+        <!-- PÁGINA 21: VSL (Vídeo de Vendas) -->
+        <div class="page" id="page21">
+            <h1 style="text-align: center; margin-bottom: 20px; font-size: 22px;">🎥 <span class="highlight">¡Mira Este Video Antes de Continuar!</span></h1>
+            
+            <p style="text-align: center; margin-bottom: 20px; font-size: 15px;">Descubre exactamente cómo la Sal Rosa del Himalaya va a transformar tu cuerpo en los próximos 30 días...</p>
+
+            <!-- EDITE AQUI: Cole o código embed do seu vídeo (YouTube, Vimeo, Wistia, etc) -->
+            <div class="editable" style="position: relative; width: 100%; max-width: 400px; margin: 0 auto; aspect-ratio: 9/16; background: #000; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                    src="https://www.youtube.com/embed/SEU-VIDEO-ID-AQUI?rel=0&modestbranding=1&showinfo=0" 
+                    title="VSL Sal Rosa del Himalaya" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; pointer-events: none; padding: 20px;">
+                    <p style="font-size: 16px; background: rgba(0,0,0,0.8); padding: 20px; border-radius: 10px;">
+                        📹 [COLOQUE SEU VÍDEO AQUI]<br><br>
+                        <small style="font-size: 12px;">Substitua "SEU-VIDEO-ID-AQUI" pelo ID do seu vídeo do YouTube em formato VERTICAL (9:16)</small>
+                    </p>
+                </div>
+            </div>
+
+            <div style="background: #FFF0EB; padding: 15px; border-radius: 15px; margin: 25px 0; text-align: center;">
+                <p style="margin: 0; font-size: 15px;">
+                    ⏰ <strong>Después de ver el video, haz clic abajo para asegurar tu descuento especial!</strong>
+                </p>
+            </div>
+
+            <!-- EDITE AQUI: Cole o link da sua página de checkout -->
+            <a href="https://go.hotmart.com/SEU-LINK-AQUI" class="button editable" style="text-decoration: none; display: block; text-align: center; font-size: 18px; padding: 20px; margin: 20px 0;">
+                🔥 ¡SÍ! QUIERO MI DESCUENTO AHORA 🔥
             </a>
 
-            <div class="security-badges" style="margin-top: 25px;">
-                <div style="text-align: center;">
-                    <div style="font-size: 24px; margin-bottom: 5px;">🛡️</div>
-                    <strong>Satisfacción</strong><br>
-                    <small>Garantizada 7 Días</small>
-                </div>
-                <div style="text-align: center;">
-                    <div style="font-size: 24px; margin-bottom: 5px;">🔒</div>
-                    <strong>Compra</strong><br>
-                    <small>100% Segura</small>
-                </div>
-                <div style="text-align: center;">
-                    <div style="font-size: 24px; margin-bottom: 5px;">🔐</div>
-                    <strong>Privacidad</strong><br>
-                    <small>Protegida</small>
-                </div>
+            <div class="security-badges" style="margin-top: 20px;">
+                <div>🛡️ Satisfacción<br>Garantizada</div>
+                <div>🔒 Compra<br>Segura</div>
+                <div>🔐 Privacidad<br>Protegida</div>
             </div>
 
-            <style>
-                @keyframes pulse {
-                    0%, 100% { transform: scale(1); }
-                    50% { transform: scale(1.02); }
-                }
-            </style>
+            <div style="text-align: center; margin-top: 20px; padding: 15px; background: #FFFBEA; border-radius: 10px;">
+                <p style="font-size: 13px; color: #666; margin: 0;">
+                    💳 <strong>Pago 100% Seguro</strong> | 🎁 <strong>Bonus Exclusivos</strong> | ⚡ <strong>Acceso Inmediato</strong>
+                </p>
+            </div>
         </div>
 
     </div>
 
     <script>
+        // CONFIGURAÇÕES EDITÁVEIS
         const CONFIG = {
-            checkoutUrl: "https://go.hotmart.com/SEU-LINK-AQUI",
-            countdownMinutes: 5
+            checkoutUrl: "https://go.hotmart.com/SEU-LINK-AQUI", // EDITE AQUI
+            countdownMinutes: 5 // Tempo do countdown em minutos
         };
 
         let currentPage = 1;
-        const totalPages = 20;
+        const totalPages = 21;
         let userData = {};
         let weightUnit = 'kg';
         let heightUnit = 'cm';
@@ -1133,6 +1096,7 @@
 
         function saveWeight() {
             userData.weight = document.getElementById('weightSlider').value;
+            document.getElementById('currentWeight').textContent = userData.weight;
         }
 
         function saveHeight() {
@@ -1140,8 +1104,8 @@
         }
 
         function calculateIMC() {
-            const weight = parseFloat(userData.weight || 70);
-            const height = parseFloat(userData.height || 170) / 100;
+            const weight = parseFloat(userData.weight);
+            const height = parseFloat(userData.height) / 100;
             const imc = (weight / (height * height)).toFixed(2);
             document.getElementById('imcValue').textContent = imc;
         }
@@ -1162,7 +1126,139 @@
             }, 1000);
         }
 
+        // Inicializar
         updateProgress();
     </script>
 </body>
 </html>
+
+        <!-- PÁGINA 10: Explicação do método -->
+        <div class="page" id="page10">
+            <h1 style="font-size: 22px; line-height: 1.4;">¡La <span class="highlight">Sal Rosa del Himalaya</span> Que Está Haciendo Que Miles de Hombres y Mujeres Adelgacen Sin Gastar Una Fortuna en Farmacia!</h1>
+            
+            <p class="subtitle">Descubre el método casero, 100% seguro y natural, que imita los efectos del Mounjaro Ozempic y Zepbound — controlando tu hambre, acelerando el metabolismo y haciéndote perder peso de forma rápida y definitiva. Sin inyecciones, sin gastar ríos de dinero y sin depender de médico charlatán.</p>
+
+            <div class="hero-image" style="max-width: 350px; margin: 20px auto;">
+                <img src="https://raw.githubusercontent.com/Jonez005/quiz-sal-rosa/main/açao.png.jpeg" alt="Cómo funciona el Truco de la Sal Rosa" style="width: 100%; height: auto; object-fit: contain; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+            </div>
+
+            <p class="subtitle">La Sal Rosa del Himalaya actúa mientras duermes, acelerando la quema de grasa a través del estímulo natural del metabolismo y del equilibrio hormonal nocturno.</p>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 11: Depoimentos -->
+        <div class="page" id="page11">
+            <h1>🔥 <span class="highlight">¡Historias Reales de Transformación!</span></h1>
+
+            <div class="testimonial editable">
+                <strong>Fernanda Oliveira</strong><br>
+                <small>Belo Alegre - RS</small>
+                <p style="margin-top: 10px;">Ya había intentado de todo para adelgazar, pero nada funcionaba. Después de incluir la fórmula de la Sal Rosa del Himalaya en mi rutina, perdí 11kg sin cambiar nada en mi alimentación. Ahora me siento más confiante y energizada. ¡Gracias por cambiar mi vida!</p>
+                <div style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div class="testimonial editable">
+                <strong>Karoline Santos</strong><br>
+                <small>São Paulo - SP</small>
+                <p style="margin-top: 10px;">Gente, yo nunca lograba adelgazar y dejar de comer azúcar. Parecía una locura, pero la Sal Rosa del Himalaya cambió todo. Ya no siento ganas de comer dulce. Todo lo que intentaba no funcionaba, pero esto sí funcionó. Solo seguí el paso a paso correctamente y dio resultado. ¡9kg en apenas 30 días!</p>
+                <div style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div class="testimonial editable" style="opacity: 0.3;">
+                <strong>[DEPOIMENTO MASCULINO 1]</strong><br>
+                <small>[Cidade] - [Estado]</small>
+                <p style="margin-top: 10px;">[TEXTO DO DEPOIMENTO AQUI]</p>
+                <div style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <div class="testimonial editable" style="opacity: 0.3;">
+                <strong>[DEPOIMENTO MASCULINO 2]</strong><br>
+                <small>[Cidade] - [Estado]</small>
+                <p style="margin-top: 10px;">[TEXTO DO DEPOIMENTO AQUI]</p>
+                <div style="background: #FFE4F0; height: 150px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                    [FOTO ANTES/DEPOIS]
+                </div>
+            </div>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 12: Peso atual -->
+        <div class="page" id="page12">
+            <h1>¿Cuál es tu <span class="highlight">peso actual?</span></h1>
+            <p class="subtitle">¡Estamos casi listos! Vamos a ajustar tu plan de acuerdo con tu cuerpo.</p>
+
+            <div class="unit-toggle">
+                <button class="unit-btn active" onclick="toggleUnit('weight', 'kg')">kg</button>
+                <button class="unit-btn" onclick="toggleUnit('weight', 'lb')">lb</button>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-value" id="weightValue">70kg</div>
+                <input type="range" min="40" max="150" value="70" class="slider" id="weightSlider" oninput="updateSlider('weight')">
+                <div class="slider-labels">
+                    <span>40</span>
+                    <span style="font-size: 10px;">Arrastra para ajustar</span>
+                    <span>150</span>
+                </div>
+            </div>
+
+            <p class="subtitle">Basado en esto, ¡ajustaremos la dosis ideal para los mejores resultados!</p>
+
+            <button class="button" onclick="saveWeight(); nextPage();">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 13: Altura -->
+        <div class="page" id="page13">
+            <h1>¿Cuál es tu <span class="highlight">altura?</span></h1>
+            <p class="subtitle">Esto nos ayudará a calcular la cantidad exacta de la Sal Rosa del Himalaya para tu cuerpo.</p>
+
+            <div class="unit-toggle">
+                <button class="unit-btn active" onclick="toggleUnit('height', 'cm')">cm</button>
+                <button class="unit-btn" onclick="toggleUnit('height', 'in')">in</button>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-value" id="heightValue">170cm</div>
+                <input type="range" min="140" max="210" value="170" class="slider" id="heightSlider" oninput="updateSlider('height')">
+                <div class="slider-labels">
+                    <span>140</span>
+                    <span style="font-size: 10px;">Arrastra para ajustar</span>
+                    <span>210</span>
+                </div>
+            </div>
+
+            <button class="button" onclick="saveHeight(); nextPage();">Continuar</button>
+        </div>
+
+        <!-- PÁGINA 14: Peso desejado -->
+        <div class="page" id="page14">
+            <h1>¿Cuál es tu <span class="highlight">objetivo de peso</span> (deseado)?</h1>
+            <p class="subtitle">Esto nos ayudará a personalizar un plan específicamente para ti.</p>
+
+            <div class="unit-toggle">
+                <button class="unit-btn active" onclick="toggleUnit('goal', 'kg')">kg</button>
+                <button class="unit-btn" onclick="toggleUnit('goal', 'lb')">lb</button>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-value" id="goalValue">60kg</div>
+                <input type="range" min="35" max="120" value="60" class="slider" id="goalSlider" oninput="updateSlider('goal')">
+                <div class="slider-labels">
+                    <span>35</span>
+                    <span style="font-size: 10px;">Arrastra para ajustar</span>
+                    <span>120</span>
+                </div>
+            </div>
+
+            <p class="subtitle">Basado en esto, ¡ajustaremos la dosis ideal para los mejores resultados!</p>
+
+            <button class="button" onclick="nextPage()">Continuar</button>
+        </div>
